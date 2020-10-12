@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/whw/.repos/arco-xfce'
+let g:netrw_dirhist_2='/home/whw/Arcolinuxd/arco-i3/Personal'
+let g:netrw_dirhist_1='/home/whw/.bin'
+let g:netrw_dirhist_0='/home/whw/.local/bin'
+let g:netrw_dirhist_9='/etc/skel/.local/share/xfce4/helpers'
+let g:netrw_dirhist_8='/etc/skel/.local/share/xfce4'
+let g:netrw_dirhist_7='/etc/skel/.local/share'
+let g:netrw_dirhist_6='/etc/skel/.local'
+let g:netrw_dirhist_5='/home/whw/.local/bin/dmenu'
+let g:netrw_dirhist_4='/home/whw/test'

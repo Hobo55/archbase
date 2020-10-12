@@ -1,0 +1,46 @@
+
+
+# -- Configure Vim for scriptwriting --
+
+	
+The vim text editor has many, many configuration settings. 
+There are several common options that can facilitate script writing.
+
+The following turns on syntax highlighting:
+
+:syntax on
+
+With this setting, different elements of shell syntax will be displayed 
+in different colors when viewing a script. 
+This is helpful for identifying certain kinds of programming errors. 
+
+** Note that for this feature to work, you must have a complete 
+version of vim installed, and the file you are editing must have a
+shebang indicating the file is a shell script. If you have difficulty 
+with the previous command, try :set syntax=sh instead.
+
+The following turns on the option to highlight search results.
+
+:set hlsearch
+
+Say we search for the word echo. With this option on, each instance 
+of the word will be highlighted.
+
+The following sets the number of columns occupied by a tab character.:
+
+:set tabstop=4
+
+The default is eight columns. Setting the value to 4 (which is a 
+common practice) allows long lines to fit more easily on the screen.
+
+The following turns on the “auto indent” feature:
+
+:set autoindent
+
+This causes vim to indent a new line the same amount as the line 
+just typed. This speeds up typing on many kinds of programming 
+constructs. To stop indentation, press Ctrl-d.
+
+These changes can be made permanent by adding these commands (without the
+leading colon characters) to your ~/.vimrc file.
+                                                                     

@@ -1,0 +1,24 @@
+
+
+    Install Notes for Arcolinuxd:
+
+1. Remember to update mirrors w/alias 'mirror',
+   then update distro w/alias 'update' or 'upall'
+
+2. cd into ~/arco-xfce and run scripts to install distro
+
+3. after distro install cd into ~/arco and run start-here.sh
+
+4. start-here.sh runs menu to run scripts for my personal
+   programs and files.
+
+5. at menu: #1 to setup vim and micro editor.
+
+6. #2 to make my dirs and install my pkgs.
+
+7. now reboot system and login before choosing #3 or #4.
+
+git repos:
+git clone https://github.com/arcolinuxd/arco-xfce.git
+git clone https://github.com/Hobo55/arco.git
+
