@@ -1,11 +1,7 @@
-"+++++++++++++++++++++++++++++++++
 ""	VIMRC
 "+++++++++++++++++++++++++++++++++
-runtime! archlinux.vim		" This line should not be removed as it ensures
-" that various options are properly set to work with the Vim-related packages.
 
-"===========================================================
-"	Vundle settings
+"	Plugins
 "===========================================================
 set nocompatible					" be iMproved, required
 filetype off                        " required
@@ -28,10 +24,11 @@ call plug#begin('~/.vim/plugged')   " reqired, all plugins after this line
   "------------- editing/syntax	-----------------
   Plug 'JamshedVesuna/vim-markdown-preview'	" preview markdown
   Plug 'vim-python/python-syntax'           " Python highlighting
+  Plug 'suan/vim-instant-markdown'          " previews markdown
 
 call plug#end()	" update &runtimepath, initialize plugin sysc0
 filetype plugin indent on           " required
-"filetype plugin on
+filetype plugin on
 "
 " Manage PKGS In Native Vim instead of using plugins:
 "----------------------
@@ -189,7 +186,7 @@ let $LANG='en'
 set langmenu=en
 "Setting menu language to en
 
-"Sourcing evrything ("don't why but you need to do it)
+"Sourcing evrything (for gvim)
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 

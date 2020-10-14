@@ -72,6 +72,7 @@ mintstick-git  # (arcolinux_repo_3party) *
 mousepad
 neovim
 #pcmanfm
+#picom
 #python-pywal
 qbittorrent
 #ranger
@@ -97,6 +98,7 @@ done
 func_category System cli
 
 list=(
+awk
 #bashtop
 downgrade  # arcolinux-repo-3party
 exa       # ls official replacement
