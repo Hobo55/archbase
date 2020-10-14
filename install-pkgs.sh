@@ -57,7 +57,6 @@ list=(
 #arch-wiki-docs
 bitwarden-bin    #(arcolinux_repo_xlarg) *
 #bleachbit
-#deja-dup
 dmenu
 file-roller     #thunar-pluin
 geany
@@ -71,8 +70,8 @@ grsync
 mintstick-git  # (arcolinux_repo_3party) *
 mousepad
 neovim
-#pcmanfm
-#picom
+pcmanfm
+picom
 #python-pywal
 qbittorrent
 #ranger
