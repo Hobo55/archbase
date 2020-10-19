@@ -2,25 +2,6 @@
 
 # script to set up vim before main install/restore
 
-# Need rsync to copy folders/files 
-
-	# checking if rsync is installed
-		if pacman -Qi rsync &> /dev/null; then
-		tput setaf 2
-		echo "########################"
-		echo "  rsync is installed  "
-		echo "########################"
-		tput sgr0
-	else
-		tput setaf 208
-		echo "*******************************"
-		echo "  rsync has NOT been installed"
-		echo "       Installing rsync       "
-		echo "*******************************"
-		tput sgr0
-		sudo pacman -S rsync --noconfirm
-	fi
-
 # Install vim
 
 	# checking if vim is installed
@@ -42,15 +23,13 @@
 
 #sleep 1
 
-# Check for directory ~/.vim
-[ -d $HOME"/.vim" ] || mkdir -p $HOME"/.vim"
+cd $HOME
 
-# sync vim files to $HOME:
-rsync -av .vim/ $HOME/.config/.vim/
-rsync -av .vimrc $HOME/.vimrc
-#rsync -av /run/media/whw/Data1/archbase/xfce/.config/nvim/ $HOME/.config/nvim/
-#rsync -av /run/media/whw/Data1/archbase/xfce/.vim/ $HOME/.vim/
-#cd $HOME
+#  few settings for vim
+touch .vimrc
+echo "colorscheme blue" >> .vimrc
+echo "set number" >> .vimrc
+echo "set ruler" >> .vimrc
 
 #	write aliases to ~/.bashrc
 echo "#-------------------------------------" >> $HOME/.bashrc
@@ -59,6 +38,10 @@ echo "alias r='source .bashrc'" >> $HOME/.bashrc
 echo "alias c='clear;ls'" >> $HOME/.bashrc
 echo "alias ls='ls -ahN --color=auto --group-directories-first'" >> $HOME/.bashrc
 echo "alias v='vim'" >> $HOME/.bashrc
+
+source .bashrc
+
+cd xfce-h
 
 tput setaf 6
 echo "-----------------------------"

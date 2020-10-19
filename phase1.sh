@@ -1,6 +1,10 @@
 #!/bin/bash
 #  Arch based
-# Phase1- install rsync, install vim and micro editors
+# Phase1- clone distro for ref., change mirrors,
+# update distro, install rsync and install vim
+
+# let beetle do its work
+sh beetle.sh
 
 # Need to install rsync :
 
@@ -18,10 +22,12 @@
 		echo "       Installing rsync       "
 		echo "*******************************"
 		tput sgr0
-		sudo pacman -S rsync --noconfirm
+		sudo pacman -S --noconfirm rsync
 	fi
 sleep 1
-# Install vim pkg and copy files to $HOME/
+
+# Install vim
 sh vim-setup.sh
-# install micro pkg, copy files to $HOME
+
+# install micro
 sh micro-setup.sh

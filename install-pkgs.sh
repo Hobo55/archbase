@@ -157,7 +157,7 @@ done
 func_category Terminal
 
 list=(
-alacritty
+#alacritty
 #cool-retro-term
 sakura
 #termite
