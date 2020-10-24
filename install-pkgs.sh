@@ -1,8 +1,6 @@
 #!/bin/bash
 #set -e
 ############################################  ARCH BASE
-############################################ user-pkg.sh
-
 sudo pacman -Syy
 
 func_install() {
@@ -25,6 +23,31 @@ func_category() {
 	echo "Installing software for category " $1
 	echo;tput sgr0
 }
+
+######################################     ARCOLINUX-REPOS   #########
+func_category ARCOLINUX-REPOS
+
+list=(
+bitwarden-bin      #(arcolinux_repo_xlarg) *
+brave-bin          #(arcolinux_repo_3party)
+downgrade          #(arcolinux_repo_3party)
+font-manager-git   #(arcolinux_repo_3party)
+hardcode-fixer-git #(arcolinux_repo_3party) *
+inxi   # sys cli info gathering tool: (arcolinux_repo_3party) *
+mintstick-git      #(arcolinux_repo_3party) *
+pamac-aur          #(arcolinux_repo_3party)
+#python2-pyparted  # arcolinux_repo_3party, no AUR, for pyparted:
+#                    https://github.com/dcantrell/pyparted
+sublime-text-dev   #(arcolinux_repo_3party)
+timeshift          #(arcolinux_repo_3party)
+)
+
+count=0
+for name in "${list[@]}" ; do
+	count=$[count+1]
+	tput setaf 3;echo "Installing package nr.  "$count " " $name;tput sgr0;
+	func_install $name
+done
 
 ################################################ GRAPHICS ##############
 func_category GPX
@@ -51,32 +74,30 @@ done
 func_category Programs
 
 list=(
-#albert
-#abiword         # doc editor
+#albert             #like rofi
+abiword            # doc editor
 #arch-wiki-lite
 #arch-wiki-docs
-bitwarden-bin    #(arcolinux_repo_xlarg) *
 #bleachbit
 dmenu
-file-roller     #thunar-pluin
-geany
-geany-plugins
+file-roller        #thunar-pluin
+#geany
+#geany-plugins
 #gpick
 grsync
 #grub-customizer
 #gvim
-#kakoune       # vim-like editor
-#meld          # compare files
-mintstick-git  # (arcolinux_repo_3party) *
+gufw               # firewall manager
+#kakoune            # vim-like editor
+meld               # compare files
 mousepad
-neovim
+#neovim
 pcmanfm
 picom
 #python-pywal
 qbittorrent
 #ranger
 rofi
-sublime-text-dev  # (arcolinux_repo_3party)
 thunar
 vim
 #virtualbox
@@ -99,33 +120,28 @@ func_category System cli
 list=(
 awk
 #bashtop
-downgrade  # arcolinux-repo-3party
-exa       # ls official replacement
-expac     # dbase extraction util
-feh       # image viewer
-fzf       # cli fuzzy finder/ for machoman
-grep      # string search util
-gvfs      # for file manager usb access
-hardcode-fixer-git  #(arcolinux_repo_3party) *
-hddtemp   # hdrive temp info
-hwinfo    #  list all hardware items
-imv       # image viewer
-inxi      # sys cli info gathering tool: (arcolinux_repo_3party) *
+exa                        # ls official replacement
+expac                      # dbase extraction util
+feh                        # image viewer
+fzf                        # cli fuzzy finder/ for machoman
+grep                       # string search util
+gvfs                       # for file manager usb access
+hddtemp                    # hdrive temp info
+hwinfo                     #  list all hardware items
+imv                        # image viewer
 lightdm-webkit2-greeter
-mlocate   # search tool
-most      # pager
-nvme-cli  #  for ssd drives maint.
-#python2-pyparted # arcolinux_repo_3party, no AUR, for pyparted:
-#    https://github.com/dcantrell/pyparted
+mlocate                    # search tool
+most                       # pager
+nvme-cli                   # for ssd drives maint.
 reflector
 rsync
-shuffle   #  file manipulator for dmenu scripts
+shuffle                    # file manipulator for dmenu scripts
 #shellcheck
 tree
-#w3m     # txt browser/pager
-unclutter  #  clear mouse in tile wm
+#w3m                        # txt browser/pager
+unclutter                  # clear mouse in tile wm
 wget
-xdo      # util to perform actions on windows in x
+xdo                        # util to perform actions on windows in x
 xfce4-clipman-plugin
 )
 
@@ -142,7 +158,6 @@ func_category Browsers
 
 list=(
 firefox
-#brave-bin
 )
 
 count=0
@@ -157,7 +172,7 @@ done
 func_category Terminal
 
 list=(
-#alacritty
+alacritty
 #cool-retro-term
 sakura
 #termite
@@ -212,7 +227,7 @@ tput sgr0
 #sh AUR/brave-bin.sh
 sh AUR/candy-icons-git.sh
 #sh AUR/downgrade.sh
-sh AUR/font-manager-git.sh
+#sh AUR/font-manager-git.sh
 #sh AUR/gitfiend.sh
 #sh AUR/grub-customizer.sh
 sh AUR/micro.sh
@@ -222,12 +237,14 @@ sh AUR/pamac-aur.sh
 #sh AUR/pkgcacheclean.sh
 #sh AUR/sublime-text.sh
 sh AUR/surfn-icons-git.sh
-sh AUR/timeshift.sh
+#sh AUR/timeshift.sh
 #sh AUR/xfce4-panel-profiles.sh
 #sh AUR/zsh.sh
 
 #	always comes last (after fonts/icons)
-sh AUR/hardcode-fixer-git.sh # AUR
+tput setaf 6
+echo "Fixing hardcoded icon paths for applications - Wait for it"
+echo;tput sgr0
 sudo hardcode-fixer
 
 tput setaf 14;
@@ -235,7 +252,3 @@ echo "################################################################"
 echo "Software has been installed  REBOOT REBOOT"
 echo "################################################################"
 echo;tput sgr0
-
-# Create folders, call script
-# mkdirs in ~/
-sh folders.sh

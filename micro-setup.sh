@@ -19,7 +19,8 @@
 		yay -S micro --noconfirm
 	fi
 
-cd $HOME
+[ -d $HOME"/.config/micro" ] || mkdir -p $HOME"/.config/micro"
+rsync -av micro/ $HOME/.config/micro/
 
 #	aliases for .bashrc
 echo "#---Micro aliases" >> $HOME/.bashrc
@@ -30,8 +31,6 @@ echo "alias edmicro='micro .config/micro/settings.json'" >> $HOME/.bashrc
 echo "alias mlightdm='sudo micro /etc/lightdm/lightdm.conf'" >> $HOME/.bashrc
 echo "alias mmirrorlist='sudo micro /etc/pacman.d/mirrorlist'" >> $HOME/.bashrc
 echo "alias mmirrorservice='sudo micro /usr/local/bin/update-mirror'" >> $HOME/.bashrc
-
-cd xfce-h
 
 tput setaf 208
 echo "**********************************"

@@ -1,8 +1,5 @@
 #!/bin/bash
-
 # Arch-base personal folders
-########################################################################
-# Based on scripts by Erik Dubois arcolinux
 ########################################################################
 
 #xdg-user-dirs-update
@@ -17,6 +14,7 @@ tput sgr0
 [ -d $HOME"/.config/micro" ] || mkdir -p $HOME"/.config/micro"
 [ -d $HOME"/.config/rofi" ] || mkdir -p $HOME"/.config/rofi"
 [ -d $HOME"/.config/sakura" ] || mkdir -p $HOME"/.config/sakura"
+[ -d $HOME"/.config/sublime-text-3" ] || mkdir -p $HOME"/.config/sublime-text-3"
 [ -d $HOME"/.config/Thunar" ] || mkdir -p $HOME"/.config/Thunar"
 [ -d $HOME"/.local/share" ] || mkdir -p $HOME"/.local/share"
 [ -d $HOME"/.vim" ] || mkdir -p $HOME"/.vim"
