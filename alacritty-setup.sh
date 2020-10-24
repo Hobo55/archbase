@@ -5,9 +5,9 @@
 	# checking if alacritty is installed
 		if pacman -Qi alacritty &> /dev/null; then
 		tput setaf 2
-		echo "########################"
-		echo "  alacritty is installed  "
-		echo "########################"
+		echo "###########################"
+		echo "  alacritty is installed   "
+		echo "###########################"
 		tput sgr0
 	else
 		tput setaf 208

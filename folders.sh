@@ -10,7 +10,8 @@ echo "Creating personal folders. "
 tput sgr0
 
 [ -d $HOME"/.bin2" ] || mkdir -p $HOME"/.bin2"
-[ -d $HOME"/.config/geany/colorschemes" ] || mkdir -p $HOME"/.config/geany/colorschemes"
+[ -d $HOME"/.config/alacritty" ] || mkdir -p $HOME"/.config/alacritty"
+#[ -d $HOME"/.config/geany/colorschemes" ] || mkdir -p $HOME"/.config/geany/colorschemes"
 [ -d $HOME"/.config/micro" ] || mkdir -p $HOME"/.config/micro"
 [ -d $HOME"/.config/rofi" ] || mkdir -p $HOME"/.config/rofi"
 [ -d $HOME"/.config/sakura" ] || mkdir -p $HOME"/.config/sakura"
