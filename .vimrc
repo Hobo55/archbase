@@ -4,60 +4,61 @@
 "	Plugins
 "===========================================================
 set nocompatible					" be iMproved, required
-filetype off                        " required
 
-call plug#begin('~/.vim/plugged')   " reqired, all plugins after this line
-
-  Plug 'junegunn/vim-plug'                  "
-
-  "--------------- Status Line -------------------------
-  Plug 'itchyny/lightline.vim'				" statusbar
-  Plug 'itchyny/vim-gitbranch'				" git in stusbar
-
-  "-------------  colorschemes  -------------------
-  Plug 'HenryNewcomer/vim-theme-papaya'		" colorscheme
-  Plug 'lucasprag/simpleblack'
-  "-------------  Other  -------------------------
-  Plug 'vimwiki/vimwiki'					" vimwiki
-  Plug 'ap/vim-css-color'					" show hex colors in files
-
-  "------------- editing/syntax	-----------------
-  Plug 'JamshedVesuna/vim-markdown-preview'	" preview markdown
-  Plug 'vim-python/python-syntax'           " Python highlighting
-  Plug 'suan/vim-instant-markdown'          " previews markdown
-
-call plug#end()	" update &runtimepath, initialize plugin sysc0
-filetype plugin indent on           " required
-filetype plugin on
+"filetype off                        " required
+"PLUGINS HERE"
+"filetype plugin indent on           " required
 "
-" Manage PKGS In Native Vim instead of using plugins:
-"----------------------
-"packadd! nerdtree " ! for when you run vim --noplugin, won't add pkg.
+"  STATUS LINE CONF & COLOR SETTINGS
+"======================================
+" to see color highlighting for each colorscheme statusline source:
+" :so $VIMRUNTIME/syntax/hitest.vim
 
-"		Lightline plugin - # 2
-"==========================================================
-" :h g:lightline.colorscheme, to show lightline colorschemes
-"	set colorscheme and add more
-let g:lightline = {
-    \ 'colorscheme': 'substrata',
-    \ 'active': {
-    \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'gitbranch', 'readonly', 'filename', 'filetype', 'modified' ] ],
-    \ 'component_function': {
-    \   'gitbranch': 'gitbranch#name',
-    \   'filetype': '%y',
-    \ },
-    \  'right': [ [ 'bufnum' ],
-    \             [ 'column' ],
-    \              [ 'lineinfo' ],
-	  \				      [ 'absolutepath' ] ],
-	  \ },
-	  \ 'component': {
-    \ 'absolutepath': '%F',
-    \ 'lineinfo': '%l/%L',
-    \ 'column': 'c:%c',
-    \ },
-    \ }
+" funcion to show git branch in vim's statusline:
+"------------------------------------------------
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+"-----------------------------------------------
+
+" function to show current mode:
+let g:currentmode={
+       \ 'n'  : 'NORMAL ',
+       \ 'v'  : 'VISUAL ',
+       \ 'V'  : 'V·Line ',
+       \ '' : 'V·Block ',
+       \ 'i'  : 'INSERT ',
+       \ 'R'  : 'R ',
+       \ 'Rv' : 'V·Replace ',
+       \ 'c'  : 'Command ',
+       \}
+
+set statusline=                "LEFT SIDE
+set statusline+=%#Cursor#
+set statusline+=\ %{toupper(g:currentmode[mode()])}
+set statusline+=%#DiffAdd#
+set statusline+=%{StatuslineGit()}
+set statusline+=%#CursorColumn#
+set statusline+=\ %f
+set statusline+=\ %y
+set statusline+=\ %m
+set statusline+=%=             "RIGHT SIDE
+"set statusline+=%#CursorColumn#
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\ [%{&fileformat}\]
+"set statusline+=\ %p%%
+set statusline+=\ %l/%L
+set statusline+=
+set statusline+=\ %c
+set statusline+=
+set statusline+=%#Title#
+set statusline+=\ (%n)
+
 
 set laststatus=2			" include statusbar in vim
 set t_Co=256				" set 256 colors if terminal supports it
@@ -65,13 +66,6 @@ set termguicolors           " enable true color in vim, if available in terminal
 set noshowmode				" git rid of insert showing below
 let g:rehash256 = 1
 
-"==========================================================
-"		choose a vim editor colorscheme
-"==========================================================
-"colorscheme focus-point                   " colorschemes
-"colorscheme gruvbox
- "set background=dark      " for dark version
-"colorscheme odyssey
 colorscheme substrata
 "==========================================================
 " Cursor line   **set after colorschemes, or get overwritten
@@ -146,49 +140,12 @@ nnoremap <C-H> <C-W><C-H>
 "nmap <F10> :bnext<CR>
 "nmap <silent> <leader>q :SyntasticCheck # <CR> :bp <BAR> bd #<CR>
 
-" Vim Wiki ------------------------------------------
-"		for notes in markdown
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                     \ 'syntax': 'markdown', 'ext': '.md'}]
-
-" Vim-Instant-Markdown -----------------------------
-let g:instant_markdown_autostart = 0         " Turns off auto preview
-let g:instant_markdown_browser = "firefox"   " Uses web browser for preview
-map <Leader>md :InstantMarkdownPreview<CR>   " Previews .md file
-map <Leader>ms :InstantMarkdownStop<CR>      " Kills the preview
-
 " Open terminal inside Vim ------------------------
 map <Leader>tt :vnew term://bash<CR>
 
 " Mouse Scrolling  --------------------------------
 set mouse=nicr     " scrolling
 set mouse=a        " allow pasting
-
-" for gvim widget hider ---------------------------
-set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=L  "remove left-hand scroll bar
-
-" Convert text to UTF-8 ---------------------------
-setglobal termencoding=utf-8 fileencodings=
-scriptencoding utf-8
-set encoding=utf-8
-autocmd BufNewFile,BufRead  *   try
-autocmd BufNewFile,BufRead  *   set encoding=utf-8
-autocmd BufNewFile,BufRead  *   endtry
-"Going over all of this would take too much time
-"This basically set everything in utf-8 in every circumtances
-
-" Set Vim Language ---------------------------------
-let $LANG='en'
-"Setting env LANG var to english
-set langmenu=en
-"Setting menu language to en
-
-"Sourcing evrything (for gvim)
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
 
 " NETRW ---------------------------------------------------
 " open netrw
