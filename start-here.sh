@@ -9,15 +9,15 @@ info_option() {
 menu_option_one() {
   tput setaf 11
   echo ""
-  echo "  Install rsync,vim pkg and copy files to $HOME. "
+  echo "  Installing rsync, reflector & vim- copy files to $HOME. "
   tput sgr0
-  #sh vim-setup.sh
+  #sh phase1.sh
 }
 
 menu_option_two() {
   tput setaf 11
   echo ""
-  echo "  Install micro pkg and copy files TO $HOME. "
+  echo "  Installing micro and copy files TO $HOME. "
   tput sgr0
   #sh micro-setup.sh
 }
@@ -25,16 +25,15 @@ menu_option_two() {
 menu_option_three() {
   tput setaf 11
   echo ""
-  echo "  Install pkgs and create needed directories. "
+  echo "  Installing pkgs and create needed directories. "
   tput sgr0
-  #sh install-pkgs.sh
+  #sh phase2.sh
 }
 
 menu_option_four() {
   tput setaf 11
   echo ""
-  echo "  ** You should reboot before restoring **"
-  echo "            personal xfce files.           "
+  echo "  ** Restoring user xfce4 files **"
   tput sgr0
   #sh xfce-restore.sh
 }
@@ -63,11 +62,12 @@ press_enter() {
 }
 
 incorrect_selection() {
-  tput setaf 124
+  tput setaf 1
   echo ""
   echo ""
-  echo ""
-  echo "         ERROR! Try again.  "
+  echo "      #######################"
+  echo "         ERROR! Try again.   "
+  echo "      #######################"
   tput sgr0
 }
 
@@ -76,10 +76,10 @@ until [ "$selection" = "0" ]; do
 tput setaf 208
   echo ""
   echo "    1  -  Read install info. "
-  echo "    2  -  Install and setup vim editor editor."
+  echo "    2  -  Fix mirrors, update,setup vim and Reboot."
   echo "    3  -  Install and setup micro editor. "
-  echo "    4  -  Create my dirs/install my programs."
-  echo "    5  -  Restore personal xfce4 files. *Reboot First*"
+  echo "    4  -  Create user dirs/install user programs."
+  echo "    5  -  Restore user xfce4 files. * MOUNT DATA1 *"
   echo "    6  -  Install alacritty terminal. "
   echo "    7  -  Setup basic zsh."
   echo "    0  -  Exit"

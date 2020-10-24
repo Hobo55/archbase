@@ -49,3 +49,6 @@ sh beetle.sh
 
 # Install vim
 sh vim-setup.sh
+
+# Reboot
+sudo reboot
