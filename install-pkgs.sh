@@ -33,6 +33,7 @@ brave-bin          #(arcolinux_repo_3party)
 downgrade          #(arcolinux_repo_3party)
 font-manager-git   #(arcolinux_repo_3party)
 hardcode-fixer-git #(arcolinux_repo_3party) *
+hw-probe           #(arcolinux_repo_3party)
 inxi   # sys cli info gathering tool: (arcolinux_repo_3party) *
 mintstick-git      #(arcolinux_repo_3party) *
 pamac-aur          #(arcolinux_repo_3party)
