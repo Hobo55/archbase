@@ -4,7 +4,7 @@
 # Author	:	Erik Dubois
 # Website	:	https://www.erikdubois.be
 
-package="xfce4-panel-profiles-git"
+package="xfce4-panel-profiles"
 
 #------------------------------------------------------------------------
 

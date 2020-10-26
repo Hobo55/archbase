@@ -1,6 +1,7 @@
 #!/bin/bash
 #set -e
 ############################################  ARCH BASE
+
 sudo pacman -Syy
 
 func_install() {
@@ -19,36 +20,10 @@ func_install() {
 }
 
 func_category() {
-	tput setaf 14;
+	tput setaf 6;
 	echo "Installing software for category " $1
 	echo;tput sgr0
 }
-
-######################################     ARCOLINUX-REPOS   #########
-func_category ARCOLINUX-REPOS
-
-list=(
-bitwarden-bin      #(arcolinux_repo_xlarg) *
-brave-bin          #(arcolinux_repo_3party)
-downgrade          #(arcolinux_repo_3party)
-font-manager-git   #(arcolinux_repo_3party)
-hardcode-fixer-git #(arcolinux_repo_3party) *
-hw-probe           #(arcolinux_repo_3party)
-inxi   # sys cli info gathering tool: (arcolinux_repo_3party) *
-mintstick-git      #(arcolinux_repo_3party) *
-pamac-aur          #(arcolinux_repo_3party)
-#python2-pyparted  # arcolinux_repo_3party, no AUR, for pyparted:
-#                    https://github.com/dcantrell/pyparted
-sublime-text-dev   #(arcolinux_repo_3party)
-timeshift          #(arcolinux_repo_3party)
-)
-
-count=0
-for name in "${list[@]}" ; do
-	count=$[count+1]
-	tput setaf 3;echo "Installing package nr.  "$count " " $name;tput sgr0;
-	func_install $name
-done
 
 ################################################ GRAPHICS ##############
 func_category GPX
@@ -95,7 +70,6 @@ mousepad
 #neovim
 pcmanfm
 picom
-#python-pywal
 qbittorrent
 #ranger
 rofi
@@ -103,7 +77,6 @@ thunar
 vim
 #virtualbox
 #zim
-#xed
 )
 
 count=0
@@ -194,7 +167,7 @@ func_category Fonts
 
 list=(
 awesome-terminal-fonts
-adobe-source-sans-pro-fonts
+adobe-source-code-pro-fonts
 #cantarell-fonts
 noto-fonts
 #ttf-bitstream-vera
@@ -217,30 +190,29 @@ for name in "${list[@]}" ; do
 done
 
 ############################################  AUR PKGS SCRIPTS  ########
-tput setaf 172
+tput setaf 3
 echo "=================================="
 echo "  Installing programs from AUR  "
 echo "=================================="
 tput sgr0
 
-#sh AUR/awesome-terminal-fonts.sh
-#sh AUR/bitwarden.sh
-#sh AUR/brave-bin.sh
+sh AUR/bitwarden.sh
+sh AUR/brave-bin.sh
 sh AUR/candy-icons-git.sh
-#sh AUR/downgrade.sh
-#sh AUR/font-manager-git.sh
-#sh AUR/gitfiend.sh
-#sh AUR/grub-customizer.sh
+sh AUR/downgrade.sh
+sh AUR/font-manager.sh
+sh AUR/hardcode-fixer-git.sh
+sh AUR/macho.sh              #cli manpage searcher
 sh AUR/micro.sh
+sh AUR/mintstick-git.sh
 sh AUR/nerd-fonts-mononoki.sh
-#sh AUR/mintstick.sh
-sh AUR/pamac-aur.sh
-#sh AUR/pkgcacheclean.sh
-#sh AUR/sublime-text.sh
+sh AUR/pamac-aur-git.sh
+sh AUR/pkgcacheclean.sh
+sh AUR/sublime-text-3.sh
 sh AUR/surfn-icons-git.sh
-#sh AUR/timeshift.sh
-#sh AUR/xfce4-panel-profiles.sh
-#sh AUR/zsh.sh
+sh AUR/timeshift.sh
+sh AUR/xcwd-git.sh           #tool to pwd of current focused window
+#sh AUR/xfce4-panel-profiles.sh  needed ??
 
 #	always comes last (after fonts/icons)
 tput setaf 6
