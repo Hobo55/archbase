@@ -3,60 +3,60 @@
 info_option() {
 	echo ""
 	echo ""
-	cat README.md
+	cat info.txt | less
 }
 
 menu_option_one() {
-  tput setaf 11
+  tput setaf 3
   echo ""
   echo "  Installing rsync, reflector & vim- copy files to $HOME. "
   tput sgr0
-  #sh phase1.sh
+  sh phase1.sh
 }
 
 menu_option_two() {
-  tput setaf 11
+  tput setaf 3
   echo ""
-  echo "  Installing micro and copy files TO $HOME. "
+  echo "  Installing micro and copy files to $HOME. "
   tput sgr0
-  #sh micro-setup.sh
+  sh micro-setup.sh
 }
 
 menu_option_three() {
-  tput setaf 11
+  tput setaf 3
   echo ""
-  echo "  Installing pkgs and create needed directories. "
+  echo "  Installing pkgs and create needed directories for $HOME. "
   tput sgr0
-  #sh phase2.sh
+  sh phase2.sh
 }
 
 menu_option_four() {
-  tput setaf 11
+  tput setaf 3
   echo ""
   echo "  ** Restoring user xfce4 files **"
   tput sgr0
-  #sh xfce-restore.sh
+  sh xfce-restore.sh
 }
 
 menu_option_five() {
-  tput setaf 11
+  tput setaf 3
   echo ""
-  echo "  Install alacritty terminal.  "
+  echo "  Install alacritty terminal to $HOME.  "
   tput sgr0
-  #sh alacritty-setup.sh
+  sh alacritty-setup.sh
 }
 
 zsh_option() {
-  tput setaf 11
+  tput setaf 3
   echo ""
-  echo "  Setup zsh shell.  "
+  echo "  Setup basic zsh shell to $HOME.  "
   tput sgr0
-  #sh zsh-setup.sh
+  sh zsh-setup.sh
 }
 
 press_enter() {
   echo ""
-  echo -n "	Press Enter to continue "
+  echo -n "  Press Enter to continue "
   read
   clear
 }
@@ -73,15 +73,15 @@ incorrect_selection() {
 
 until [ "$selection" = "0" ]; do
   clear
-tput setaf 208
+tput setaf 3
   echo ""
   echo "    1  -  Read install info. "
-  echo "    2  -  Fix mirrors, update,setup vim and Reboot."
-  echo "    3  -  Install and setup micro editor. "
-  echo "    4  -  Create user dirs/install user programs."
+  echo "    2  -  Fix mirrors, update distro,setup vim and Reboot."
+  echo "    3  -  Skip Or Install and setup micro editor (nano alternative). "
+  echo "    4  -  Create user directories/install user programs."
   echo "    5  -  Restore user xfce4 files. * MOUNT DATA1 *"
-  echo "    6  -  Install alacritty terminal. "
-  echo "    7  -  Setup basic zsh."
+  echo "    6  -  Skip Or Install and setup alacritty terminal. "
+  echo "    7  -  Skip Or Install and setup basic zsh."
   echo "    0  -  Exit"
   echo ""
   echo -n "  Enter selection: "

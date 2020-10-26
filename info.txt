@@ -2,23 +2,34 @@
 
     Install Notes for Arcolinuxd:
 
-1. Remember to update mirrors w/alias 'mirror',
-   then update distro w/alias 'update' or 'upall'
+* archbase is intended to be used to install user pkgs/files
+  right after an arch-based distro is installed to take
+  advantage of menu choice #2 
 
-2. cd into ~/arco-xfce and run scripts to install distro
+       Menu order should be followed up to #5 
 
-3. after distro install cd into ~/arco and run start-here.sh
+1. Read this info
 
-4. start-here.sh runs menu to run scripts for my personal
-   programs and files.
+2. Install rsync, reflector, updates mirrors, updates
+   installed distro.iso, install/setup vim editor files and
+   then REBOOTS SYSTEM. (after reboot/login, repeat process
+   to get to menu)
 
-5. at menu: #1 to setup vim and micro editor.
+3. Choose to install/setup micro editor (nano alternative)
 
-6. #2 to make my dirs and install my pkgs.
+4. Install user select packages, create user directories.
 
-7. now reboot system and login before choosing #3 or #4.
+5. Restores user files from a mounted ssd/usb.
 
-git repos:
-git clone https://github.com/arcolinuxd/arco-xfce.git
-git clone https://github.com/Hobo55/arco.git
+6. Choose to install/setup alacritty terminal and config
 
+7. Choose to install/setup basic zsh.
+
+      git repos:
+-for reference to arcolinux-d (arcolinuxd) install scripts-
+   git clone https://github.com/arcolinuxd/arco-xfce.git
+
+-this install:
+   git clone https://github.com/Hobo55/archbase.git
+
+** Enter Q to quit pager **

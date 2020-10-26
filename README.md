@@ -1,16 +1,17 @@
  # archbase
-  Used to restore user's select configs/files after different arch installs.
-  Install scripts modified from Arcolinux.
+  * Restore user's select configs/files after non-arcolinux arch-based installs.
 
  Arcolinux
-  More info at https://arcolinuxd.com
-  Thanks to Eric Dubois and the team at Arcolinux.
+  * Install scripts modified from Arcolinux.
+  * More info at https://arcolinux.info
+  * Thanks to Eric Dubois and the team at Arcolinux.
 
  # note:
  
-  * After distro install cd into ~/arco and run start-here.sh.
-    start-here.sh provides a menu to run scripts to install
-    packages & restore files. 
+  * After distro is installed cd into ~/archbase and run start-here:
+       $./start-here.sh
+    - which provides a menu to install packages & restore files.
+  * Read menu selection #1 to see what the selections do. 
   * Vim was synced w/o plugins installed as they are git repos.
 	  So, plugins are already listed in Plug section of .vimrc.
 	  Do a :PlugInstall once ~/.vim files are in place.

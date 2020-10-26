@@ -3,9 +3,6 @@
 # Phase1- clone distro for ref., change mirrors,
 # update distro, install rsync and install vim
 
-# let beetle do its work
-sh beetle.sh
-
 # need rsync:
 
 	# checking if rsync is installed
@@ -46,6 +43,9 @@ sh beetle.sh
 	fi
 
 #sleep 1
+
+# let beetle do its work
+sh beetle.sh
 
 # Install vim
 sh vim-setup.sh
