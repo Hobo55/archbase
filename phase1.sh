@@ -1,54 +1,31 @@
 #!/bin/bash
 #  Arch based
-# Phase1- clone distro for ref., change mirrors,
-# update distro, install rsync and install vim
 
 # need rsync:
-
-	# checking if rsync is installed
 		if pacman -Qi rsync &> /dev/null; then
-		tput setaf 2
-		echo "########################"
-		echo "  rsync is installed  "
-		echo "########################"
-		tput sgr0
+		tput setaf 2;echo " rsync is in ";tput sgr0
 	else
-		tput setaf 208
-		echo "*******************************"
-		echo "  rsync has NOT been installed"
-		echo "       Installing rsync       "
-		echo "*******************************"
-		tput sgr0
+		tput setaf 3;echo " Installing rsync ";tput sgr0
 		sudo pacman -S --noconfirm rsync
 	fi
-
-
 # need reflector:
-
-	# checking if reflector is installed
 		if pacman -Qi reflector &> /dev/null; then
-		tput setaf 2
-		echo "########################"
-		echo "  reflector is installed  "
-		echo "########################"
-		tput sgr0
+		tput setaf 2;echo " reflector is in ";tput sgr0
 	else
-		tput setaf 11
-		echo "**********************************"
-		echo "  reflector has NOT been installed"
-		echo "       Installing Package         "
-		echo "**********************************"
-		tput sgr0
+		tput setaf 3;echo " Installing reflector ";tput sgr0
 		sudo pacman -S --noconfirm reflector
 	fi
 
-#sleep 1
+# update mirrors
+tput setaf 6;echo " Updating mirror list. ";tput sgr0
+sudo reflector -f 30 -l 30 --number 10 --sort rate --verbose --save /etc/pacman.d/mirrorlist
+sleep 1
 
-# let beetle do its work
-sh beetle.sh
+# update distro
+sudo pacman -Syyu --color auto
 
-# Install vim
-sh vim-setup.sh
+# vim
+sh conf/vim-setup.sh
 
 # Reboot
 sudo reboot

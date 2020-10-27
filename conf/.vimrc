@@ -50,7 +50,7 @@ set statusline+=%#Title#
 set statusline+=\ (%n)
 
 set laststatus=2			    " include statusbar in vim
-colorscheme blue
+colorscheme substrata
 set noshowmode				" git rid of insert showing below
 set cursorline
 nnoremap <C-s> :w<CR>       " alternate save
