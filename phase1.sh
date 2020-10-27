@@ -28,4 +28,7 @@ sudo pacman -Syyu --color auto
 sh conf/vim-setup.sh
 
 # Reboot
+tput setaf 6;echo "";echo ""
+echo " **** TIME TO REBOOT OS *** "
+sleep 5
 sudo reboot
