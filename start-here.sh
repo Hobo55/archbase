@@ -20,7 +20,7 @@ menu_option_three() {
   echo ""
   echo "  Installing micro and copy files to $HOME. "
   tput sgr0
-  sh micro-setup.sh
+  sh su/micro-setup.sh
 }
 
 menu_option_four() {
@@ -44,7 +44,7 @@ menu_option_six() {
   echo ""
   echo "  Install alacritty terminal to $HOME.  "
   tput sgr0
-  sh alacritty-setup.sh
+  sh su/alacritty-setup.sh
 }
 
 zsh_option() {
@@ -52,7 +52,7 @@ zsh_option() {
   echo ""
   echo "  Setup basic zsh shell to $HOME.  "
   tput sgr0
-  sh zsh-setup.sh
+  sh su/zsh-setup.sh
 }
 
 press_enter() {

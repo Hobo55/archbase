@@ -19,11 +19,11 @@
 		sudo pacman -S alacritty --needed
 	fi
 
-# test for .configdirectory-if not, make one.
+# test for .config directory-if not, make one.
 [ -d $HOME"/.config/alacritty" ] || mkdir -p $HOME"/.config/alacritty"
 
 # Copy files to $HOME:
-rsync -av alacritty/ $HOME/.config/alacritty/
+rsync -av conf/alacritty.yml/ $HOME/.config/alacritty/
 
 tput setaf 14
 echo "-----------------------"
