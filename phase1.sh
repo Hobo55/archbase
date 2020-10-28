@@ -25,7 +25,7 @@ sleep 1
 sudo pacman -Syyu --color auto
 
 # vim
-sh conf/vim-setup.sh
+sh su/vim-setup.sh
 
 # Reboot
 tput setaf 6;echo "";echo ""
