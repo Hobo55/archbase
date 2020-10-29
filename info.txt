@@ -17,9 +17,11 @@
 
 3. Choose to install/setup micro editor (nano alternative)
 
-4. Install user select packages, create user directories.
+4. Install user select packages. Create user directories.
+   NOTE: edit install-pkgs.sh before execution.
 
 5. Restores user files from a mounted ssd/usb.
+   NOTE: compare distro's  ~/.bashrc before restore overwrite.
 
 6. Choose to install/setup alacritty terminal and config
 

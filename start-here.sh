@@ -27,6 +27,7 @@ menu_option_four() {
   tput setaf 3
   echo ""
   echo "  Installing pkgs and make directories for $HOME. "
+  echo "  Check package list and edit install-pkgs.sh before execution. "
   tput sgr0
   sh phase2.sh
 }
@@ -79,7 +80,7 @@ tput setaf 3
   echo "    1  -  Read install info. "
   echo "    2  -  Fix mirrors, update distro,setup vim and Reboot."
   echo "    3  -  Install and setup micro editor (nano alternative). "
-  echo "    4  -  Create user directories/install user programs."
+  echo "    4  -  Install user programs. Check and edit install-pkgs.sh before choosing."
   echo "    5  -  Restore user xfce4 files. * MOUNT DATA1 *"
   echo "    6  -  Install and setup alacritty terminal. "
   echo "    7  -  Install and setup basic zsh."
