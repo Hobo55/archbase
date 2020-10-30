@@ -32,6 +32,7 @@ rsync -av /run/media/whw/Data1/arcolinux/xfce/.vim/ $HOME/.vim/
 ##  config folders
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/alacritty/ $HOME/.config/alacritty/
 #rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/geany/ $HOME/.config/geany/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/gtk-3.0/bookmarks $HOME/.config/gtk-3.0/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/micro/ $HOME/.config/micro/
 #rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/nvim/ $HOME/.config/nvim/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/rofi/ $HOME/.config/rofi/
@@ -41,7 +42,7 @@ rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/termite/ $HOME/.config/ter
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/Thunar/ $HOME/.config/Thunar/
 #rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/xfce4/ $HOME/.config/xfce4/
 
-tput setaf 14
+tput setaf 3
 echo "######################################"
 echo "###      Programs Installed       ####"
 echo "######################################"

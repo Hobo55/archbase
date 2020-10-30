@@ -2,12 +2,6 @@
 # credits to Soehub
 # https://gist.github.com/soehub/fc07b86e2292c562328ee0dc2aadf740
 set -e
-##################################################################################################################
-# Author	:	Erik Dubois
-
-#   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
-#
-##################################################################################################################
 
 numberofcores=$(grep -c ^processor /proc/cpuinfo)
 
