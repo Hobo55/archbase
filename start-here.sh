@@ -56,6 +56,14 @@ zsh_option() {
   sh su/zsh-setup.sh
 }
 
+remove_option() {
+  tput setaf 3
+  echo ""
+  echo "  Remove selected packages in helpers/rm-pkgs.sh "
+  tput sgr0
+  sh helpers/rm-pkgs.sh
+}
+
 press_enter() {
   echo ""
   echo -n "  Press Enter to continue "
@@ -84,6 +92,7 @@ tput setaf 3
   echo "    5  -  Restore user xfce4 files. * MOUNT DATA1 *"
   echo "    6  -  Install and setup alacritty terminal. "
   echo "    7  -  Install and setup basic zsh."
+  echo "    8  -  Remove packages. Edit pkg list before this."
   echo "    0  -  Exit"
   echo ""
   echo -n "  Enter selection: "
@@ -98,6 +107,7 @@ tput sgr0
     5 ) clear ; menu_option_five ; press_enter ;;
     6 ) clear ; menu_option_six ; press_enter ;;
     7 ) clear ; zsh_option ; press_enter ;;
+    8 ) clear ; remove_option ; press_enter ;;
     0 ) clear ; exit ;;
     * ) clear ; incorrect_selection ; press_enter ;;
   esac
