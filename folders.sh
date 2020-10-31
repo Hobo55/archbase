@@ -17,6 +17,7 @@ tput sgr0
 [ -d $HOME"/.config/sakura" ] || mkdir -p $HOME"/.config/sakura"
 [ -d $HOME"/.config/sublime-text-3" ] || mkdir -p $HOME"/.config/sublime-text-3"
 [ -d $HOME"/.config/Thunar" ] || mkdir -p $HOME"/.config/Thunar"
+[ -d $HOME"/.local/bin" ] || mkdir -p $HOME"/.local/bin"
 [ -d $HOME"/.local/share" ] || mkdir -p $HOME"/.local/share"
 [ -d $HOME"/.vim" ] || mkdir -p $HOME"/.vim"
 [ -d $HOME"/backgrounds" ] || mkdir -p $HOME"/backgrounds"

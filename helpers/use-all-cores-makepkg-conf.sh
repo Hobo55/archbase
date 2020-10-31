@@ -4,7 +4,7 @@
 set -e
 
 numberofcores=$(grep -c ^processor /proc/cpuinfo)
-
+tput setaf 3
 if [ $numberofcores -gt 1 ]
 then
         echo "You have " $numberofcores" cores."
@@ -16,7 +16,8 @@ else
         echo "No change."
 fi
 
-
+tput setaf 6
 echo "################################################################"
 echo "###  All cores will be used during building and compression ####"
 echo "################################################################"
+tput sgr0

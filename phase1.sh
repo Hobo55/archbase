@@ -16,6 +16,9 @@
 		sudo pacman -S --noconfirm reflector
 	fi
 
+# setup menu script in ~$HOME/.local/bin
+sh beetle.sh
+
 # update mirrors
 tput setaf 6;echo " Updating mirror list. ";tput sgr0
 sudo reflector -f 30 -l 30 --number 10 --sort rate --verbose --save /etc/pacman.d/mirrorlist
@@ -32,6 +35,8 @@ sh su/vim-setup.sh
 
 # Reboot
 tput setaf 6;echo "";echo ""
-echo " **** TIME TO REBOOT OS *** "
-sleep 5
+echo "****************************"
+echo "     TIME TO REBOOT OS      "
+echo "****************************"
+sleep 3
 sudo reboot
