@@ -43,9 +43,9 @@ menu_option_five() {
 menu_option_six() {
   tput setaf 3
   echo ""
-  echo "  Install alacritty terminal to $HOME.  "
+  echo "  Install and setup bspwm files to $HOME.  "
   tput sgr0
-  sh su/alacritty-setup.sh
+  sh su/bspwm.sh
 }
 
 zsh_option() {
@@ -90,7 +90,7 @@ tput setaf 3
   echo "    3  -  Install and setup micro editor (nano alternative). "
   echo "    4  -  Install user programs. Check and edit install-pkgs.sh before choosing."
   echo "    5  -  Restore user xfce4 files. * MOUNT DATA1 *"
-  echo "    6  -  Install and setup alacritty terminal. "
+  echo "    6  -  Install and setup bspwm. "
   echo "    7  -  Install and setup basic zsh."
   echo "    8  -  Remove packages. Edit pkg list before this."
   echo "    0  -  Exit"
