@@ -31,9 +31,11 @@ rsync -av /run/media/whw/Data1/arcolinux/xfce/.vim/ $HOME/.vim/
 
 ##  config folders
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/alacritty/ $HOME/.config/alacritty/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/bspwm/ $HOME/.config/bspwm/
 #rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/geany/ $HOME/.config/geany/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/gtk-3.0/bookmarks $HOME/.config/gtk-3.0/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/micro/ $HOME/.config/micro/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/polybar/ $HOME/.config/polybar/
 #rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/nvim/ $HOME/.config/nvim/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/rofi/ $HOME/.config/rofi/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/sakura/ $HOME/.config/sakura/
