@@ -28,6 +28,7 @@ tput sgr0
 [ -d $HOME"/backgrounds" ] || mkdir -p $HOME"/backgrounds"
 [ -d $HOME"/Documents" ] || mkdir -p $HOME"/Documents"
 [ -d $HOME"/helpers" ] || mkdir -p $HOME"/helpers"
+[ -d $HOME"/repos" ] || mkdir -p $HOME"/repos"
 #[ -d $HOME"/zim" ] || mkdir -p $HOME"/zim"
 
 
