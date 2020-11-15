@@ -12,7 +12,7 @@ tput sgr0
 
 rsync -av /run/media/whw/Data1/arcolinux/xfce/\
 .{balias,bashrc,bash_functions,bash_prompt,gitconfig,vimrc,zalias,zshrc} $HOME/
-rsync -av /run/media/whw/Data1/arcolinux/xfce/.bin2/ $HOME/.bin2/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/bin/ $HOME/bin/
 
 #	xfce keybinds 
 rsync -av /run/media/whw/Data1/arcolinux/xfce/xfce4-keyboard-shortcuts.xml\

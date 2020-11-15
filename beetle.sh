@@ -7,6 +7,7 @@ sudo pacman -S --noconfirm --needed most
 
 # folder in place ?
 [ -d $HOME"/.local/bin" ] || mkdir -p $HOME"/.local/bin"
+[ -d $HOME"/bin" ] || mkdir -p $HOME"/bin"
 
 # copy script to folder
 cp -Rf helpers/menu-bin $HOME/.local/bin/
@@ -15,3 +16,4 @@ cp -Rf helpers/menu-bin $HOME/.local/bin/
 echo "#=========================" >> $HOME/.bashrc
 echo "# alias for archbase menu" >> $HOME/.bashrc
 echo "alias menu='menu-bin'" >> $HOME/.bashrc
+echo "PATH=$HOME/bin:$PATH" >> $HOME/.bashrc

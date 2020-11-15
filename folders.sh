@@ -9,7 +9,7 @@ tput setaf 2
 echo "Creating personal folders. "
 tput sgr0
 
-[ -d $HOME"/.bin2" ] || mkdir -p $HOME"/.bin2"
+[ -d $HOME"/bin" ] || mkdir -p $HOME"/bin"
 [ -d $HOME"/.config/alacritty" ] || mkdir -p $HOME"/.config/alacritty"
 [ -d $HOME"/.config/bspwm" ] || mkdir -p $HOME"/.config/bspwm"
 #[ -d $HOME"/.config/geany/colorschemes" ] || mkdir -p $HOME"/.config/geany/colorschemes"
