@@ -14,9 +14,11 @@ rsync -av /run/media/whw/Data1/arcolinux/xfce/\
 .{balias,bashrc,bash_functions,bash_prompt,gitconfig,vimrc,zalias,zshrc} $HOME/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/bin/ $HOME/bin/
 
-#	xfce keybinds 
+#	xfce keybinds and xfce4-terminal 
 rsync -av /run/media/whw/Data1/arcolinux/xfce/xfce4-keyboard-shortcuts.xml\
  $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/ 
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/xfce4/terminal/\
+ $HOME/.config/xfce4/terminal/
 ####  COPY ICONS AND THEMES FROM DATA1 W FILEMANGR  ####################
 
 #	to HOME folders
