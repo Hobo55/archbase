@@ -17,3 +17,8 @@ echo "#=========================" >> $HOME/.bashrc
 echo "# alias for archbase menu" >> $HOME/.bashrc
 echo "alias menu='menu-bin'" >> $HOME/.bashrc
 echo "PATH=$HOME/bin:$PATH" >> $HOME/.bashrc
+
+## example lines for install scripts
+#mkdir -p "$HOME/bin"
+#echo 'PATH=$HOME/bin:$PATH' >> "$HOME/.bashrc"
+#source "$HOME/.bashrc"
