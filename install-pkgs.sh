@@ -210,6 +210,7 @@ sh AUR/pamac-aur-git.sh
 sh AUR/pkgcacheclean.sh
 sh AUR/sublime-text-3.sh
 sh AUR/surfn-icons-git.sh
+sh AUR/tdrop.sh             # dropdown scratchpad
 sh AUR/timeshift.sh
 sh AUR/xcwd-git.sh           #tool to pwd of current focused window
 #sh AUR/xfce4-panel-profiles.sh  needed ??

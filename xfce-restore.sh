@@ -23,7 +23,8 @@ rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/xfce4/terminal/\
 
 #	to HOME folders
 rsync -av /run/media/whw/Data1/arcolinux/xfce/backgrounds/ $HOME/backgrounds/
-rsync -av /run/media/whw/Data1/arcolinux/xfce/Documents/{invest.txt,note.txt} $HOME/Documents/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/Documents/\
+{todo.txt,note.txt,filesys.png,git01.jpg,linux_commands.webp,vim.jpg} $HOME/Documents/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/helpers/ $HOME/helpers/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.local/share/\
 {icons,themes,xfce4-panel-profiles} $HOME/.local/share/
