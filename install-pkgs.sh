@@ -208,6 +208,7 @@ sh AUR/mintstick-git.sh
 sh AUR/nerd-fonts-mononoki.sh
 sh AUR/pamac-aur-git.sh
 sh AUR/pkgcacheclean.sh
+sh AUR/stacer.sh
 sh AUR/sublime-text-3.sh
 sh AUR/surfn-icons-git.sh
 sh AUR/tdrop.sh             # dropdown scratchpad
