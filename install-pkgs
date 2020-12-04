@@ -196,25 +196,25 @@ echo "  Installing programs from AUR  "
 echo "=================================="
 tput sgr0
 
-sh AUR/bitwarden.sh
-sh AUR/brave-bin.sh
-sh AUR/candy-icons-git.sh
-sh AUR/downgrade.sh
-sh AUR/font-manager.sh
-sh AUR/hardcode-fixer-git.sh
-sh AUR/macho.sh              #cli manpage searcher
-sh AUR/micro.sh
-sh AUR/mintstick-git.sh
-sh AUR/nerd-fonts-mononoki.sh
-sh AUR/pamac-aur-git.sh
-sh AUR/pkgcacheclean.sh
-sh AUR/stacer.sh
-sh AUR/sublime-text-3.sh
-sh AUR/surfn-icons-git.sh
-sh AUR/tdrop.sh             # dropdown scratchpad
-sh AUR/timeshift.sh
-sh AUR/xcwd-git.sh           #tool to pwd of current focused window
-#sh AUR/xfce4-panel-profiles.sh  needed ??
+./ AUR/bitwarden
+./ AUR/brave-bin
+./ AUR/candy-icons-git
+./ AUR/downgrade
+./ AUR/font-manager
+./ AUR/hardcode-fixer-git
+./ AUR/macho              #cli manpage searcher
+./ AUR/micro
+./ AUR/mintstick-git
+./ AUR/nerd-fonts-mononoki
+./ AUR/pamac-aur-git
+./ AUR/pkgcacheclean
+./ AUR/stacer
+./ AUR/sublime-text-3
+./ AUR/surfn-icons-git
+./ AUR/tdrop             # dropdown scratchpad
+./ AUR/timeshift
+./ AUR/xcwd-git           #tool to pwd of current focused window
+#./ AUR/xfce4-panel-profiles  # needed ??
 
 #	always comes last (after fonts/icons)
 tput setaf 6
