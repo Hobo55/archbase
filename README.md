@@ -14,4 +14,4 @@
   * Read menu selection #1 to see what the selections do. 
   * Vim was synced w/o plugins installed as they are git repos.
 	  So, plugins are already listed in Plug section of .vimrc.
-	  Do a :PlugInstall once ~/.vim files are in place.
+	  :PlugInstall after ~/.vim files are in place.
