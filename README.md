@@ -1,7 +1,7 @@
  # archbase
   * Restore user's select configs/files after non-arcolinux arch-based installs.
 
- Arcolinux
+ ## Arcolinux:
   * Install scripts modified from Arcolinux.
   * More info at https://arcolinux.info
   * Thanks to Eric Dubois and the team at Arcolinux.
