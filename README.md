@@ -1,4 +1,4 @@
- # archbase
+ ## archbase
   * Restore user's select configs/files after non-arcolinux arch-based installs.
 
  ## Arcolinux:
@@ -6,7 +6,7 @@
   * More info at https://arcolinux.info
   * Thanks to Eric Dubois and the team at Arcolinux.
 
- # note:
+ ### note:
  
   * After distro is installed cd into ~/archbase and run start-here:
        $./start-here
