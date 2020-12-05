@@ -17,7 +17,7 @@
 	fi
 
 # setup menu script in ~$HOME/.local/bin
-sh beetle.sh
+./beetle
 
 # update mirrors
 tput setaf 6;echo " Updating mirror list. ";tput sgr0
@@ -25,13 +25,13 @@ sudo reflector -f 30 -l 30 --number 10 --sort rate --verbose --save /etc/pacman.
 sleep 1
 
 # use all cores in building pkgs
-sh helpers/use-all-cores-makepkg-conf.sh
+./helpers/use-all-cores-makepkg-conf
 
 # update distro
 sudo pacman -Syyu --color auto
 
 # vim
-sh su/vim-setup.sh
+./su/vim-setup
 
 # Reboot
 tput setaf 6;echo "";echo ""

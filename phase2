@@ -5,8 +5,8 @@
 # exec: personal-folders.sh and arco-pkg.sh
 
 # install pkgs
-sh install-pkgs.sh
+./install-pkgs
 
 # mkdirs in ~/
-sh folders.sh
+./folders
 

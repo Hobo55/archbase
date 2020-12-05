@@ -9,7 +9,7 @@
  # note:
  
   * After distro is installed cd into ~/archbase and run start-here:
-       $./start-here.sh
+       $./start-here
     - which provides a menu to install packages & restore files.
   * Read menu selection #1 to see what the selections do. 
   * Vim was synced w/o plugins installed as they are git repos.

@@ -12,7 +12,7 @@ menu_option_two() {
   echo " Install rsync & reflector, fix mirrors,"
   echo " update distro, setup vim to $HOME. "
   tput sgr0
-  ./ phase1
+  ./phase1
 }
 
 menu_option_three() {
@@ -20,7 +20,7 @@ menu_option_three() {
   echo ""
   echo "  Installing micro and copy files to $HOME. "
   tput sgr0
-  ./ su/micro-setup
+  ./su/micro-setup
 }
 
 menu_option_four() {
@@ -29,7 +29,7 @@ menu_option_four() {
   echo "  Installing pkgs and make directories for $HOME. "
   echo "  Check package list and edit install-pkgs.sh before execution. "
   tput sgr0
-  ./ phase2
+  ./phase2
 }
 
 menu_option_five() {
@@ -37,7 +37,7 @@ menu_option_five() {
   echo ""
   echo "  ** Restoring user xfce4 files **"
   tput sgr0
-  ./ xfce-restore
+  ./xfce-restore
 }
 
 menu_option_six() {
@@ -45,7 +45,7 @@ menu_option_six() {
   echo ""
   echo "  Install and setup bspwm files to $HOME.  "
   tput sgr0
-  ./ su/bspwm
+  ./su/bspwm
 }
 
 zsh_option() {
@@ -53,7 +53,7 @@ zsh_option() {
   echo ""
   echo "  Setup basic zsh shell to $HOME.  "
   tput sgr0
-  ./ su/zsh-setup
+  ./su/zsh-setup
 }
 
 remove_option() {
@@ -61,7 +61,7 @@ remove_option() {
   echo ""
   echo "  Remove selected packages in helpers/rm-pkgs.sh "
   tput sgr0
-  ./ helpers/rm-pkgs
+  ./helpers/rm-pkgs
 }
 
 press_enter() {

@@ -3,6 +3,6 @@
 
 cd archbase
 
-source start-here.sh
+source start-here
 
 cd $HOME
