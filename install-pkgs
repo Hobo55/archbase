@@ -166,6 +166,7 @@ done
 func_category Fonts
 
 list=(
+#arcolinux-fonts-git      # fonts for conkys
 awesome-terminal-fonts
 adobe-source-code-pro-fonts
 #cantarell-fonts
@@ -174,10 +175,10 @@ noto-fonts
 #ttf-dejavu
 #ttf-droid
 ttf-font-awesome
-#ttf-hack
+ttf-hack
 #ttf-inconsolata
 #ttf-liberation
-#ttf-roboto
+ttf-roboto-mono
 ttf-ubuntu-font-family
 #tamsyn-font
 )
@@ -198,22 +199,23 @@ tput sgr0
 
 ./AUR/bitwarden
 ./AUR/brave-bin
-./AUR/candy-icons-git
+./AUR/candy-icons-git      # icons
 ./AUR/downgrade
 ./AUR/font-manager
 ./AUR/hardcode-fixer-git
-./AUR/macho              #cli manpage searcher
+./AUR/macho                #cli manpage searcher
 ./AUR/micro
 ./AUR/mintstick-git
-./AUR/nerd-fonts-mononoki
+./AUR/nerd-fonts-mononoki  # font
+./AUR/otf-code-new-roman   # font
 ./AUR/pamac-aur-git
 ./AUR/pkgcacheclean
-./AUR/stacer
+./AUR/stacer               
 ./AUR/sublime-text-3
-./AUR/surfn-icons-git
-./AUR/tdrop             # dropdown scratchpad
+./AUR/surfn-icons-git      # icons
+./AUR/tdrop                # dropdown scratchpad
 ./AUR/timeshift
-./AUR/xcwd-git           #tool to pwd of current focused window
+./AUR/xcwd-git             #tool to pwd of current focused window
 #./AUR/xfce4-panel-profiles  # needed ??
 
 #	always comes last (after fonts/icons)
