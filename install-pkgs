@@ -57,8 +57,8 @@ abiword            # doc editor
 #bleachbit
 dmenu
 file-roller        #thunar-pluin
-#geany
-#geany-plugins
+geany
+geany-plugins
 #gpick
 grsync
 #grub-customizer
@@ -93,7 +93,7 @@ func_category System cli
 
 list=(
 awk
-#bashtop
+#bashtop                    # like htop
 exa                        # ls official replacement
 expac                      # dbase extraction util
 feh                        # image viewer
@@ -106,17 +106,19 @@ imv                        # image viewer
 lightdm-webkit2-greeter
 mlocate                    # search tool
 most                       # pager
-nvme-cli                   # for ssd drives maint.
+ncdu                       # show file size
+vme-cli                    # for ssd drives maint.
 reflector
 rsync
 shuffle                    # file manipulator for dmenu scripts
-#shellcheck
-tree
+#shellcheck                 # check bash scripts
+trash-cli                  # terminal trash can
+tree                       # show file tree
 #w3m                        # txt browser/pager
 unclutter                  # clear mouse in tile wm
 wget
 xdo                        # util to perform actions on windows in x
-xfce4-clipman-plugin
+xfce4-clipman-plugin       # clipboard
 )
 
 count=0
