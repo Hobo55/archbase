@@ -15,9 +15,9 @@
 # make directory
 [ -d $HOME"/.vim" ] || mkdir -p $HOME"/.vim"
 
-# sync files
-rsync -av conf/.vim/ $HOME/.vim/
-rsync -av conf/.vimrc $HOME/
+# copy vim files
+cp -arf conf/.vim $HOME/
+cp -arf conf/.vimrc $HOME/
 
 #	write aliases to ~/.bashrc
 echo "#-------------------------------------" >> $HOME/.bashrc

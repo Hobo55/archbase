@@ -1,21 +1,44 @@
 #!/bin/bash
 
-info_option() {
-	echo ""
-	echo ""
-	cat info.txt | less
-}
+## Menu for archbase
 
-menu_option_two() {
+## choices
+
+update-OS() {
   tput setaf 3
   echo ""
-  echo " Install rsync & reflector, fix mirrors,"
-  echo " update distro, setup vim to $HOME. "
+  echo "  Update mirrors and Arch distro "
+  echo "  Reboot system  "
+  tput sgr0
+  ./update-distro
+}
+
+phase1() {
+  tput setaf 3
+  echo ""
+  echo " Setup vim files"
   tput sgr0
   ./phase1
 }
 
-menu_option_three() {
+phase2() {
+  tput setaf 3
+  echo ""
+  echo "  Installing pkgs create directories for $HOME. "
+  echo "  Check package list and edit install-pkgs.sh before execution. "
+  tput sgr0
+  ./phase2
+}
+
+restore-files() {
+  tput setaf 3
+  echo ""
+  echo "  ** Restoring user files **"
+  tput sgr0
+  ./restore-files
+}
+
+micro() {
   tput setaf 3
   echo ""
   echo "  Installing micro and copy files to $HOME. "
@@ -23,24 +46,7 @@ menu_option_three() {
   ./su/micro-setup
 }
 
-menu_option_four() {
-  tput setaf 3
-  echo ""
-  echo "  Installing pkgs and make directories for $HOME. "
-  echo "  Check package list and edit install-pkgs.sh before execution. "
-  tput sgr0
-  ./phase2
-}
-
-menu_option_five() {
-  tput setaf 3
-  echo ""
-  echo "  ** Restoring user xfce4 files **"
-  tput sgr0
-  ./xfce-restore
-}
-
-menu_option_six() {
+bspwm() {
   tput setaf 3
   echo ""
   echo "  Install and setup bspwm files to $HOME.  "
@@ -48,7 +54,7 @@ menu_option_six() {
   ./su/bspwm
 }
 
-zsh_option() {
+zsh() {
   tput setaf 3
   echo ""
   echo "  Setup basic zsh shell to $HOME.  "
@@ -56,7 +62,7 @@ zsh_option() {
   ./su/zsh-setup
 }
 
-remove_option() {
+remove() {
   tput setaf 3
   echo ""
   echo "  Remove selected packages in helpers/rm-pkgs.sh "
@@ -85,11 +91,11 @@ until [ "$selection" = "0" ]; do
   clear
 tput setaf 3
   echo ""
-  echo "    1  -  Read install info. "
-  echo "    2  -  Fix mirrors, update distro,setup vim and Reboot."
-  echo "    3  -  Install and setup micro editor (nano alternative). "
-  echo "    4  -  Install user programs. Check and edit install-pkgs.sh before choosing."
-  echo "    5  -  Restore user xfce4 files. * MOUNT DATA1 *"
+  echo "    1  -  Update Mirrors & Arch Distro- Reboot OS. "
+  echo "    2  -  Install vim files."
+  echo "    3  -  Install user programs. Edit pkgs before chossing install. "
+  echo "    4  -  Restore user files. * MOUNT DATA1 *"
+  echo "    5  -  Install micro editor."
   echo "    6  -  Install and setup bspwm. "
   echo "    7  -  Install and setup basic zsh."
   echo "    8  -  Remove packages. Edit pkg list before this."
@@ -100,14 +106,14 @@ tput setaf 3
   echo ""
 tput sgr0
   case $selection in
-    1 ) clear ; info_option ; press_enter ;;
-    2 ) clear ; menu_option_two ; press_enter ;;
-    3 ) clear ; menu_option_three ; press_enter ;;
-    4 ) clear ; menu_option_four ; press_enter ;;
-    5 ) clear ; menu_option_five ; press_enter ;;
-    6 ) clear ; menu_option_six ; press_enter ;;
-    7 ) clear ; zsh_option ; press_enter ;;
-    8 ) clear ; remove_option ; press_enter ;;
+    1 ) clear ; update-OS ; press_enter ;;
+    2 ) clear ; phase1 ; press_enter ;;
+    3 ) clear ; phase2 ; press_enter ;;
+    4 ) clear ; restore-files ; press_enter ;;
+    5 ) clear ; micro ; press_enter ;;
+    6 ) clear ; bspwm ; press_enter ;;
+    7 ) clear ; zsh ; press_enter ;;
+    8 ) clear ; remove ; press_enter ;;
     0 ) clear ; exit ;;
     * ) clear ; incorrect_selection ; press_enter ;;
   esac

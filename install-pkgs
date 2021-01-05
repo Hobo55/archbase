@@ -29,9 +29,9 @@ func_category() {
 func_category GPX
 
 list=(
-evince     # doc viewer
-gimp
-gpick
+#evince     # doc viewer
+#gimp
+#gpick
 inkscape   # gpx editor
 nitrogen
 nomacs     # image viewr/editor
@@ -55,7 +55,7 @@ abiword            # doc editor
 #arch-wiki-lite
 #arch-wiki-docs
 #bleachbit
-dmenu
+#dmenu
 file-roller        #thunar-pluin
 geany
 geany-plugins
@@ -64,13 +64,12 @@ grsync
 #grub-customizer
 #gvim
 gufw               # firewall manager
-#kakoune            # vim-like editor
 meld               # compare files
-mousepad
+#mousepad
 #neovim
-pcmanfm
+#pcmanfm
 picom
-qbittorrent
+#qbittorrent
 #ranger
 rofi
 thunar
@@ -150,10 +149,10 @@ func_category Terminal
 list=(
 alacritty
 #cool-retro-term
-sakura
+#sakura
 #termite
 #terminator
-xfce4-terminal
+#xfce4-terminal
 )
 
 count=0
@@ -200,7 +199,7 @@ echo "=================================="
 tput sgr0
 
 ./AUR/bitwarden
-./AUR/brave-bin
+#./AUR/brave-bin
 ./AUR/candy-icons-git      # icons
 ./AUR/downgrade
 ./AUR/font-manager
@@ -212,8 +211,8 @@ tput sgr0
 ./AUR/otf-code-new-roman   # font
 ./AUR/pamac-aur-git
 ./AUR/pkgcacheclean
-./AUR/stacer               
-./AUR/sublime-text-3
+#./AUR/stacer               
+#./AUR/sublime-text-3
 ./AUR/surfn-icons-git      # icons
 ./AUR/tdrop                # dropdown scratchpad
 ./AUR/timeshift

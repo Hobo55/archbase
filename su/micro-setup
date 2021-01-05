@@ -23,7 +23,7 @@
 [ -d $HOME"/.config/micro" ] || mkdir -p $HOME"/.config/micro"
 
 # sync files
-rsync -av conf/micro/ $HOME/.config/micro/
+cp -arf conf/micro $HOME/.config/
 
 #	aliases for .bashrc
 echo "#---Micro aliases" >> $HOME/.bashrc

@@ -23,7 +23,7 @@
 [ -d $HOME"/.config/alacritty" ] || mkdir -p $HOME"/.config/alacritty"
 
 # Copy files to $HOME:
-rsync -av conf/alacritty.yml/ $HOME/.config/alacritty/
+cp -arf conf/alacritty.yml/ $HOME/.config/alacritty/
 
 tput setaf 14
 echo "-----------------------"

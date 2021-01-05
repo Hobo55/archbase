@@ -1,14 +1,29 @@
 #!/bin/bash
-#  Arch based
 
-# need rsync:
+# alias for menu-bin to .bashrc
+echo "#=========================" >> $HOME/.bashrc
+echo "# alias for archbase menu" >> $HOME/.bashrc
+echo "alias menu='menu-bin'" >> $HOME/.bashrc
+echo "PATH=$HOME/bin:$PATH" >> $HOME/.bashrc
+
+##  packages needed:
+
+## most (replaces the less pager)
+		if pacman -Qi most &> /dev/null; then
+		tput setaf 2;echo " most installed ";tput sgr0
+	else
+		tput setaf 3;echo " Installing rsync ";tput sgr0
+		sudo pacman -S --noconfirm --needed most
+	fi
+
+## need rsync:
 		if pacman -Qi rsync &> /dev/null; then
 		tput setaf 2;echo " rsync installed ";tput sgr0
 	else
 		tput setaf 3;echo " Installing rsync ";tput sgr0
-		sudo pacman -S --noconfirm rsync
+		sudo pacman -S --noconfirm --needed rsync
 	fi
-# need reflector:
+## need reflector:
 		if pacman -Qi reflector &> /dev/null; then
 		tput setaf 2;echo " reflector installed ";tput sgr0
 	else
@@ -16,27 +31,5 @@
 		sudo pacman -S --noconfirm reflector
 	fi
 
-# setup menu script in ~$HOME/.local/bin
-./beetle
-
-# update mirrors
-tput setaf 6;echo " Updating mirror list. ";tput sgr0
-sudo reflector -f 30 -l 30 --number 10 --sort rate --verbose --save /etc/pacman.d/mirrorlist
-sleep 1
-
-# use all cores in building pkgs
-./helpers/use-all-cores-makepkg-conf
-
-# update distro
-sudo pacman -Syyu --color auto
-
-# vim
+# install & setup vim files
 ./su/vim-setup
-
-# Reboot
-tput setaf 6;echo "";echo ""
-echo "****************************"
-echo "     TIME TO REBOOT OS      "
-echo "****************************"
-sleep 3
-sudo reboot
