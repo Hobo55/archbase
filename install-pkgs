@@ -106,6 +106,7 @@ lightdm-webkit2-greeter
 mlocate                    # search tool
 most                       # pager
 ncdu                       # show file size
+pacman-contrib             # util scripts for pacman
 vme-cli                    # for ssd drives maint.
 reflector
 rsync
@@ -192,6 +193,7 @@ for name in "${list[@]}" ; do
 done
 
 ############################################  AUR PKGS SCRIPTS  ########
+###    CANNOT USE THESE IN ABOVE FUNCTIONS- RUN W AUR SCRIPTS       ####
 tput setaf 3
 echo "=================================="
 echo "  Installing programs from AUR  "
@@ -199,7 +201,7 @@ echo "=================================="
 tput sgr0
 
 ./AUR/bitwarden
-#./AUR/brave-bin
+./AUR/brave
 ./AUR/candy-icons-git      # icons
 ./AUR/downgrade
 ./AUR/font-manager
@@ -210,7 +212,7 @@ tput sgr0
 ./AUR/nerd-fonts-mononoki  # font
 ./AUR/otf-code-new-roman   # font
 ./AUR/pamac-aur-git
-./AUR/pkgcacheclean
+./AUR/pkgcacheclean        # cache cleaner for pacman
 #./AUR/stacer               
 #./AUR/sublime-text-3
 ./AUR/surfn-icons-git      # icons
