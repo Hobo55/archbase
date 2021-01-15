@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-package="brave"
+package="hw-probe-git"
 
 #----------------------------------------------------------------------------------
 
@@ -39,6 +39,7 @@ else
 	fi
 
 fi
+
 
 # Just checking if installation was successful
 if pacman -Qi $package &> /dev/null; then

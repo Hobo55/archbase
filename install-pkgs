@@ -206,7 +206,8 @@ tput sgr0
 ./AUR/downgrade
 ./AUR/font-manager
 ./AUR/hardcode-fixer-git
-./AUR/macho                #cli manpage searcher
+./AUR/hw-probe-git         # hardware tool-shows website/stats
+./AUR/macho                # cli manpage searcher
 ./AUR/micro
 ./AUR/mintstick-git
 ./AUR/nerd-fonts-mononoki  # font
