@@ -1,0 +1,228 @@
+##################  ALIASES  ############################################
+# Personal bash aliases
+# ~/.balias
+
+#alias menu='menu-bin' # for archbase and xfced
+
+#		TERMINAL MISC
+#############################################
+#   Helpful reminders & safetynets
+alias rm='rm -riv'
+#alias cp='cp -iv'
+alias mv='mv -iv'
+
+#   misc
+alias grep='grep --color=auto -n'
+alias al='alias | most'
+alias j='jobs'
+alias mkdir='mkdir -pv'
+alias c='clear'
+alias r='source .bashrc'
+
+# navigate
+alias ..='cd ..' 
+alias ...='cd ../..'
+alias .3='cd ../../..'
+
+#switch between terminal shells
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+
+
+#      FILES
+#############################################
+alias ls='ls -AhNp --color=auto --group-directories-first'
+#alias ls='ls --color=auto'
+
+#	for exa (alt ls util):
+alias l='exa -a --color=always --group-directories-first'
+alias ll='exa -al --color=always --group-directories-first'
+alias lsize='exa -a --reverse --sort=size'
+#alias lsize='exa -a --sort=size'
+alias lt='exa -aT --color=always --group-directories-first | most' # tree listing
+alias l.='exa -a | egrep "^\."'
+
+#	BACKUP select dotfiles as edited
+alias save-cinn='source bin/cinn-save'
+alias save-dotfiles='source bin/dotfiles.sh'
+alias save-gramps='source bin/gramps.sh'
+alias xfce-save='source bin/xfce-save'
+alias fix-bin='source bin/fix-bin'
+alias files-git='source bin/dotfiles-git.sh'
+alias backup-skel='cp -Rf /etc/skel ~/.skel-backup-$(date +%m.%d-%Y)'
+
+#    EDITING FILES
+#################################################
+# Edit select configs:
+##########################################
+editor="nvim"          #<- variable for editor
+
+alias edbash='$editor .bashrc'
+alias edalias='$editor .balias'
+alias edbspwm='$editor ~/.config/bspwm/bspwmrc'
+alias edmicro='$editor ~/.config/micro/settings.json'
+alias edpolybar='$editor ~/.config/polybar/config'
+alias edkeys='$editor ~/.config/bspwm/sxhkd/sxhkdrc'
+alias edterm='$editor ~/.config/termite/config'
+alias edvim='$editor .vimrc'
+alias edxresource='$editor .Xresources'
+alias edzsh='$editor .zshrc'
+
+#   with micro
+alias m='micro'
+alias todo='micro Documents/todo.txt'
+alias notes='micro Documents/note.txt'
+alias edstrshp='micro .config/starship.toml'
+alias fam-info='micro Documents/family-tree.txt'
+
+# Edit files sudo:
+alias mgrub="sudo nano /etc/default/grub"
+alias mlightdm='sudo micro /etc/lightdm/lightdm.conf'
+alias mmirrorlist='sudo micro /etc/pacman.d/mirrorlist'
+alias mmirrorservice='sudo micro /usr/local/bin/update-mirror'
+alias mssh='sudo micro /etc/ssh/ssh_config'
+alias mmkinitcpio="sudo micro /etc/mkinitcpio.conf"
+
+#  python
+alias p='python3'
+#alias nano='nano -l'
+alias theme='. ~/helpers/color-themes'
+
+#	with Vim / Neovim
+alias v='vim'
+#alias edvim='vim .vimrc'
+alias nv='nvim'
+
+#	after editing .Xresources
+alias xre='xrdb -merge ~/.Xresources'
+
+#      Programs/scripts
+###########################################################
+#	cinnamon portable keybindings w/ dconf
+alias expkeys='sh bin/dconf_dump.sh'
+alias impkeys='sh bin/dconf_load.sh'
+
+#		arch-wiki-lite
+# Ex: wiki <name searched>
+alias wiki='wiki-search'
+
+#      manpage-search/ macho man
+alias mp='macho'
+
+#      show terminal colors
+alias colors='source bin/termcolors'
+alias 256='source bin/print256'
+#===============================
+
+#		Arch SOFTWARE MANAGMENT:
+############################################################
+
+#	yay as aur helper (--noconfirm updates everything):
+alias updaur='yay -Syu --noconfirm'
+
+#	Cleanup orphaned packages:
+#alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+
+#	Recent Installed Packages:(pacman dbase extraction util)
+alias ripsize="expac -H M '%m\t%n' | sort -h | nl | most"
+alias ripshort="expac --timefmt='%F %T' '%l %n' | sort -n | tail -n 20 | most"
+# expac -H, humansize, M Mg, %m install size, %n pkg name, sort -human
+
+#	install pkgs
+alias getpkg='sudo pacman -S'
+alias getaurpkg='yay -S'
+
+#	list installed pkgs from AUR to ~/aur-pkgs
+alias list-pkgs='source ~/bin/arco-pkg-list'
+
+#	get installed pkg info
+alias pkgi='pacman -Qi' # +pkg name, local
+alias aurpkgi='sudo pacman -Si' # +pkg name
+
+#	remove pkg
+alias rmpkg='sudo pacman -Rns'
+
+#	search repo for pkg
+alias findpkg='sudo pacman -Ss'
+alias findaurpkg='yay -Ss'     # search AUR
+alias archnews='yay -Pw'
+
+#		Git
+##########################################
+alias gs='git status'
+alias ga='git add -A'
+alias gc='git commit'
+alias gd='git diff'
+alias gp='git push -u origin'
+alias gco='git checkout' #<branch>
+
+##	Git Push-script
+#alias git-push='. ~/bin/git-push.sh'
+
+## for Git --bare repo
+#alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+#		ADMIN
+############################################
+
+alias dmesg='dmesg -HL'
+alias watch='watch -d'
+alias diff='colordiff'
+#alias chown='chown --preserve root'
+#alias chmod='chmod --preserve root'
+#alias chgrp='chgrp --preserve root'
+
+#	send a file to Trash
+alias trash='mv --force -t ~/.local/share/Trash '
+
+#   ps
+alias psa="ps -auxf"
+
+#	Get top process eating memory
+alias Mem5='ps -auxf | sort -nr -k 4 | head -5'
+alias Mem10='ps -auxf | sort -nr -k 4 | head -10'
+
+#	List largest directories (aka "ducks")
+alias dir5='du -cksh * | sort -hr | head -n 5'
+alias dir10='du -cksh * | sort -hr | head -n 10'
+
+#	lightdm- list greeters
+alias greeters='ls -l /usr/share/xgreeters/'
+
+#	partitions ??
+alias parts='lsblk --fs'
+
+#	systemctl
+alias service='sudo systemctl list-unit-files'
+alias release='cat /etc/lsb-release'
+
+#   use all cores
+alias usecores="sh ~/bin/use-all-cores-makepkg-conf.sh"
+
+#   userlist
+alias userlist="cut -d: -f1 /etc/passwd"
+
+#  improve png
+alias fixpng="find . -type f -name "*.png" -exec convert {} -strip {} \;"
+
+# which gpx card driver installed
+alias gpx-driver="lspci -k | grep -A 2 -E '(VGA|3D)'"
+
+#		WEB  NETWORKING
+#############################################
+#	cheat.sh from chubin, github
+alias cheat='curl cheat.sh'
+alias chthelp='curl cheat.sh/:help'
+#	get external ip address
+alias ipe='curl ipinfo.io/ip'
+#   continue download
+alias wget="wget -c"
+
+#	MIRRORS - using 'reflector' /etc/pacman.d/mirrorlist, etc/pacman.d/hooks/mirrorupgrade.hook
+############################################################
+alias mirrorus="sudo reflector -c US -f 20 -l 20 --number 10 --sort rate --verbose --save /etc/pacman.d/mirrorlist"
+#	examples:
+# reflector --country France --country Germany --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+# reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+#-------------------------------------------------------------------------------\\\
