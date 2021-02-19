@@ -6,7 +6,7 @@
 # exec: personal-folders.sh and arco-pkg.sh
 
 # mkdirs in ~/
-./folders
+./kde-folders
 
 # install pkgs
-./install-pkgs
+./kde-pkgs

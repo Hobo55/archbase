@@ -1,9 +1,7 @@
 #!/bin/bash
-
 ## Menu for archbase
 
 ## choices
-
 update-OS() {
   tput setaf 3
   echo ""
@@ -16,18 +14,27 @@ update-OS() {
 phase1() {
   tput setaf 3
   echo ""
-  echo " Setup vim files"
+  echo " Setup vim & bash files"
   tput sgr0
   ./phase1
 }
 
-phase2() {
+xfce-phase() {
   tput setaf 3
   echo ""
-  echo "  Installing pkgs create directories for $HOME. "
+  echo "  Installing pkgs create directories for xfce4 $HOME. "
   echo "  Check package list and edit install-pkgs.sh before execution. "
   tput sgr0
-  ./phase2
+  ./xfce-phase
+}
+
+kde-phase() {
+  tput setaf 3
+  echo ""
+  echo "  Installing pkgs create directories for kde $HOME. "
+  echo "  Check package list and edit install-pkgs.sh before execution. "
+  tput sgr0
+  ./kde-phase
 }
 
 restore-files() {
@@ -92,7 +99,7 @@ until [ "$selection" = "0" ]; do
 tput setaf 3
   echo ""
   echo "    1  -  Update Mirrors & Arch Distro- Reboot OS. "
-  echo "    2  -  Install vim files."
+  echo "    2  -  Install vim & bash files."
   echo "    3  -  Install user programs. Edit pkgs before chossing install. "
   echo "    4  -  Restore user files. * MOUNT DATA1 *"
   echo "    5  -  Install micro editor."
