@@ -1,0 +1,35 @@
+#!/bin/bash
+
+#    **** FOR ARCH BASED DISTROS *****
+
+# restore files- arcolinuxb plasma install
+
+tput setaf 11
+echo "================================"
+echo "Restoring home files for user."
+echo "================================"
+tput sgr0
+
+## basic home folders
+rsync -av /run/media/whw/Data1/arcolinux/plasma/\
+.{bashrc,conky,gitconfig,Xresources} $HOME/
+rsync -av /run/media/whw/Data1/arcolinux/plasma/bash/ $HOME/bash/
+rsync -av /run/media/whw/Data1/arcolinux/plasma/backgrounds/ $HOME/backgrounds/
+rsync -av /run/media/whw/Data1/arcolinux/plasma/bin/ $HOME/bin/
+rsync -av /run/media/whw/Data1/arcolinux/plasma/Documents/ $HOME/Documents/
+rsync -av /run/media/whw/Data1/arcolinux/plasma/helpers/ $HOME/helpers/
+
+## local/share folders
+rsync -av /run/media/whw/Data1/arcolinux/plasma/.local/share/ $HOME/.local/share/
+
+## NOTE: COPY ICONS AND THEMES FROM DATA1 W FILEMANGR
+
+##  config folders
+rsync -av /run/media/whw/Data1/arcolinux/plasma/.config/ $HOME/.config/
+rsync -av /run/media/whw/Data1/arcolinux/plasma/.ssh/ $HOME/.ssh/
+
+tput setaf 3
+echo "######################################"
+echo "###      Programs Installed       ####"
+echo "######################################"
+tput sgr0

@@ -1,0 +1,34 @@
+#!/bin/bash
+# Arch-base personal folders
+
+
+#xdg-user-dirs-update
+xdg-user-dirs-update --force
+
+tput setaf 2
+echo "Creating personal folders. "
+tput sgr0
+
+[ -d $HOME"/backgrounds" ] || mkdir -p $HOME"/backgrounds"
+[ -d $HOME"/bash" ] || mkdir -p $HOME"/bash"
+[ -d $HOME"/bin" ] || mkdir -p $HOME"/bin"
+[ -d $HOME"/Documents" ] || mkdir -p $HOME"/Documents"
+[ -d $HOME"/helpers" ] || mkdir -p $HOME"/helpers"
+[ -d $HOME"/.config/BraveSoftware" ] || mkdir -p $HOME"/.config/BraveSoftware"
+[ -d $HOME"/.config/conky" ] || mkdir -p $HOME"/.config/conky"
+[ -d $HOME"/.config/geany/colorschemes" ] || mkdir -p $HOME"/.config/geany/colorschemes"
+[ -d $HOME"/.config/micro" ] || mkdir -p $HOME"/.config/micro"
+[ -d $HOME"/.config/nvim" ] || mkdir -p $HOME"/.config/nvim"
+[ -d $HOME"/.config/rofi" ] || mkdir -p $HOME"/.config/rofi"
+#[ -d $HOME"/.config/Thunar" ] || mkdir -p $HOME"/.config/Thunar"
+[ -d $HOME"/.config/terminator" ] || mkdir -p $HOME"/.config/terminator"
+[ -d $HOME"/.config/termite" ] || mkdir -p $HOME"/.config/termite"
+[ -d $HOME"/.local/share" ] || mkdir -p $HOME"/.local/share"
+[ -d $HOME"/.ssh" ] || mkdir -p $HOME"/.ssh"
+
+tput sgr0
+tput setaf 6
+echo "################################################################"
+echo "###       personal folders created or existed already       ####"
+echo "################################################################"
+tput sgr0
