@@ -12,7 +12,7 @@ echo "PATH=$HOME/bin:$PATH" >> $HOME/.bashrc
 		if pacman -Qi most &> /dev/null; then
 		tput setaf 2;echo " most installed ";tput sgr0
 	else
-		tput setaf 3;echo " Installing rsync ";tput sgr0
+		tput setaf 3;echo " Installing most ";tput sgr0
 		sudo pacman -S --noconfirm --needed most
 	fi
 
@@ -30,6 +30,9 @@ echo "PATH=$HOME/bin:$PATH" >> $HOME/.bashrc
 		tput setaf 3;echo " Installing reflector ";tput sgr0
 		sudo pacman -S --noconfirm reflector
 	fi
+
+## setup bash
+./su/bash-setup
 
 # install & setup vim files
 ./su/vim-setup

@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# ~/bin/rofi-notebook   a rofi script to edit notes
+
+declare options=("ToDo
+Quick-Notes
+Family-Tree
+Invest
+quit")
+
+choice=$(echo -e "${options[@]}" | rofi -dmenu -p "NoteBook:")
+
+case "$choice" in
+	quit)
+		echo "Program terminated." && exit 1
+	;;
+	ToDo)
+		choice="$HOME/Documents/todo.txt"
+	;;
+	Quick-Notes)
+		choice="$HOME/Documents/note.txt"
+	;;
+	Family-Tree)
+		choice="$HOME/Documents/family-tree.txt"
+	;;
+	Invest)
+		choice="$HOME/Documents/invest.txt"
+	;;
+	example)
+		choice="$HOME/path/to/file"
+	;;
+	*)
+		exit 1
+	;;
+esac
+alacritty -e micro "$choice"
+#alacritty -e vim "$choice"
+

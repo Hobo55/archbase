@@ -1,0 +1,62 @@
+#!/bin/bash
+
+#	arco-pkg-list: script to query pkgs and count total pkgs 
+#	sends to: ~/Documents/pkg-lists/*txt
+#	created 12/21/19
+
+tput setaf 172
+echo "=============================="
+echo "Fetching those list you want."
+echo "Might take a few seconds."
+echo "=============================="
+tput sgr0
+
+#	set date and line count for each list.txt
+CURRENTDATE=$(date +"%m/%d/%Y %H:%M")
+count=$(\pacman -Q | wc -l)
+count2=$(\pacman -Qe | wc -l)
+count3=$(\pacman -Qn | wc -l)
+count4=$(\pacman -Qm | wc -l)
+count5=$(\pacman -Qet | wc -l)
+
+# make folder for files
+[ -d $HOME"/Documents/pacman" ] || mkdir -p $HOME"/Documents/pacman"
+
+#	provide text to overwrite and ammend all-pkgs.txt
+printf "\nThere are ${count} total pkgs installed.\nas of: ${CURRENTDATE}\n\n"\
+>~/Documents/pacman/all-pkgs.txt
+#	provide list of all pkgs to ammend to all-pks.txt
+\pacman -Q >>~/Documents/pacman/all-pkgs.txt
+#-------------------------------------------------------------------------\\\
+
+#	explicitly installed pkgs
+printf "\nThere are ${count2} explicit pkgs installed.\nas of: ${CURRENTDATE}\n\n"\
+>~/Documents/pacman/expl-pkgs.txt;
+\pacman -Qe >>~/Documents/pacman/expl-pkgs.txt
+#-------------------------------------------------------------------------\\\
+
+#	native installed pkgs
+printf "\nThere are ${count3} native pkgs installed.\nas of: ${CURRENTDATE}\n\n"\
+>~/Documents/pacman/native-pkgs.txt;
+\pacman -Qn >>~/Documents/pacman/native-pkgs.txt
+#-------------------------------------------------------------------------\\\
+
+#	foreign installed pkgs
+printf "\nThere are ${count4} foreign pkgs installed.\nas of: ${CURRENTDATE}\n\n"\
+>~/Documents/pacman/foreign-pkgs.txt;
+\pacman -Qm >>~/Documents/pacman/foreign-pkgs.txt
+#-------------------------------------------------------------------------\\\
+
+#	non dependent-installed pkgs
+printf "\nThere are ${count5} pkgs w/no depencies installed.\nas of: ${CURRENTDATE}\n\n"\
+>~/Documents/pacman/no-dep-pkgs.txt;
+\pacman -Qet >>~/Documents/pacman/no-dep-pkgs.txt
+#-------------------------------------------------------------------------\\\
+
+#clear
+
+tput setaf 14
+echo "================================="
+echo "Hey. Got those lists for ya!"
+echo "================================="
+tput sgr0

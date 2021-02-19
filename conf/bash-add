@@ -17,12 +17,12 @@ if [ -d "$HOME/helpers" ] ;
   then PATH="$HOME/helpers:$PATH"    #for ~/helpers
 fi
 
-HISTSIZE=1500 # History length
-HISTFILESIZE=2000 # history file lgth
+#HISTSIZE=1500 # History length
+#HISTFILESIZE=2000 # history file lgth
 
 # Editor and Pager
 #-----------------------------------------------
-EDITOR="micro"
+EDITOR="nvim"
 export EDITOR
 
 PAGER="most"

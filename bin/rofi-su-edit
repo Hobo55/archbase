@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# rofi script for editing root files.
+
+
+declare options=("grub
+lightdm
+mirrorlist
+mirror.service
+pacman
+pacman-log
+ssh
+sshd
+quit")
+
+choice=$(echo -e "${options[@]}" | rofi -dmenu -p 'Edit file as SUDO:')
+
+case "$choice" in
+	quit)
+		echo "Program terminated." && exit 1
+	;;
+	grub)
+		choice="/etc/default/grub"
+	;;
+	lightdm)
+		choice="/etc/lightdm/lightdm.conf"
+	;;
+	mirrorlist)
+		choice="/etc/pacman.d/mirrorlist"
+	;;
+	mirror.service)
+		choice="/usr/local/bin/update-mirror"
+	;;
+	pacman)
+		choice="/etc/pacman.conf"
+	;;
+	pacman-log)
+		choice="/var/log/pacman.log"
+	;;
+	ssh)
+		choice="/etc/ssh/ssh_config"
+	;;
+	sshd)
+		choice="/etc/ssh/sshd_config"
+	;;
+	*)
+		exit 1
+	;;
+esac
+
+##  editor to choose
+konsole -e sudo micro "$choice"
+#geany "$choice"
+
+##  example::
+#	example)
+#		choice="$HOME/path/to/file"
+#	;;

@@ -1,0 +1,9 @@
+#!/usr/bin/bash   
+
+# SOURCED BY:  .bin/colors256
+
+#	find color code w/in a terminal, **not gvim**
+
+for i in {0..255} ; do
+  printf "\x1b[38;5;${i}mcolour${i} "
+done

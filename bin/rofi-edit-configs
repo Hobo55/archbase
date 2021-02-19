@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# rofi script for editing some of my more frequently edited config files.
+
+declare options=("bash
+balias
+micro
+starship
+termite
+ToDo
+neovim
+xresources
+quit")
+
+choice=$(echo -e "${options[@]}" | rofi -dmenu -p "Edit config file:")
+
+case "$choice" in
+	quit)
+		echo "Program terminated." && exit 1
+	;;
+	bash)
+		choice="$HOME/.bashrc"
+	;;
+	balias)
+		choice="$HOME/bash/.balias"
+	;;
+	micro)
+		choice="$HOME/.config/micro/settings.json"
+	;;
+	starship)
+		choice="$HOME/.config/starship.toml"
+	;;
+	termite)
+		choice="$HOME/.config/termite/config"
+	;;
+	ToDo)
+		choice="$HOME/Documents/note.txt"
+	;;
+	neovim)
+		choice="$HOME/.config/nvim/init.vim"
+	;;
+	xresources)
+		choice="$HOME/.Xresources"
+	;;
+	example)
+		choice="$HOME/path/to/file"
+	;;
+	*)
+		exit 1
+	;;
+esac
+geany "$choice"

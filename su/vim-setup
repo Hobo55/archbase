@@ -2,30 +2,25 @@
 
 # script to set up vim before main install/restore
 
-# Install vim
+# Install neovim
 
-	# checking if vim is installed
-		if pacman -Qi vim &> /dev/null; then
-		tput setaf 2;echo " vim is installed ";tput sgr0
+	# checking if neovim is installed
+		if pacman -Qi neovim &> /dev/null; then
+		tput setaf 2;echo " neovim is installed ";tput sgr0
 	else
-		tput setaf 3;echo " Installing Vim ";tput sgr0
-		sudo pacman -S vim --noconfirm vim
+		tput setaf 3;echo " Installing neovim ";tput sgr0
+		sudo pacman -S --noconfirm neovim
 	fi
 
 # make directory
-[ -d $HOME"/.vim" ] || mkdir -p $HOME"/.vim"
+[ -d $HOME"/.config/nvim" ] || mkdir -p $HOME"/.config/nvim"
 
-# copy vim files
-cp -arf conf/.vim $HOME/
-cp -arf conf/.vimrc $HOME/
+# copy neovim files
+cp -arf conf/nvim $HOME/.config/
 
-#	write aliases to ~/.bashrc
-echo "#-------------------------------------" >> $HOME/.bashrc
-echo "# Aliases for vim " >> $HOME/.bashrc
-echo "alias r='source .bashrc'" >> $HOME/.bashrc
-echo "alias c='clear;ls'" >> $HOME/.bashrc
-echo "alias ls='ls -ahN --color=auto --group-directories-first'" >> $HOME/.bashrc
-echo "alias v='vim'" >> $HOME/.bashrc
+## vim not used now
+#cp -arf conf/.vim $HOME/.vim/
+#cp -arf conf/.vimrc $HOME/
 
 tput setaf 6
 echo "-----------------------------"

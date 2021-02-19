@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# dmenu-helpers  edit scripts in ~/helpers
+# Global variables:
+FILES=${1:-"/home/whw/helpers"}
+##EDITOR='alacritty -e micro'
+EDITOR='geany'
+
+# Show list of options
+choice=$(ls -a "${FILES}" | rofi -dmenu -p "Edit help script:")
+
+if [ $choice ]; then
+    $EDITOR ${FILES}/${choice}
+fi

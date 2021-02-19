@@ -99,13 +99,10 @@ alias xre='xrdb -merge ~/.Xresources'
 
 #      Programs/scripts
 ###########################################################
-#	cinnamon portable keybindings w/ dconf
-alias expkeys='sh bin/dconf_dump.sh'
-alias impkeys='sh bin/dconf_load.sh'
 
-#		arch-wiki-lite
+##		arch-wiki-lite
 # Ex: wiki <name searched>
-alias wiki='wiki-search'
+#alias wiki='wiki-search'
 
 #      manpage-search/ macho man
 alias mp='macho'

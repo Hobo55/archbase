@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# dotfiles-edit  edit scripts in ~/bin
+
+# Global variables:
+FILES=${1:-"/home/whw/bin"}
+#EDITOR='alacritty -e micro'
+EDITOR='geany'
+
+# Show list of options
+choice=$(ls -a "${FILES}" | rofi -dmenu -p "Edit /bin script:")
+
+if [ $choice ]; then
+    $EDITOR ${FILES}/${choice}
+fi
