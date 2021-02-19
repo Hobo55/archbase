@@ -1,12 +1,14 @@
 #!/bin/bash
 
-# Create personal folders in $HOME and install programs I use
+# KDE folders in $HOME and install programs I use
 ##############################################################
 
-# exec: personal-folders.sh and arco-pkg.sh
+## mkdirs in ~/
+./kde/kde-folders
 
-# mkdirs in ~/
-./kde-folders
+## install pkgs
+./kde/kde-pkgs
 
-# install pkgs
-./kde-pkgs
+## restore files
+./kde/kde-restore 
+

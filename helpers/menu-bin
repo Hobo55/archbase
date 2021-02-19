@@ -5,4 +5,4 @@ cd archbase
 
 source start-here
 
-cd $HOME
+#cd $HOME

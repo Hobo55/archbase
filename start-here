@@ -22,7 +22,7 @@ phase1() {
 xfce-phase() {
   tput setaf 3
   echo ""
-  echo "  Installing pkgs create directories for xfce4 $HOME. "
+  echo "  Installing XFEC pkgs & home files.  "
   echo "  Check package list and edit install-pkgs.sh before execution. "
   tput sgr0
   ./xfce-phase
@@ -35,14 +35,6 @@ kde-phase() {
   echo "  Check package list and edit install-pkgs.sh before execution. "
   tput sgr0
   ./kde-phase
-}
-
-restore-files() {
-  tput setaf 3
-  echo ""
-  echo "  ** Restoring user files **"
-  tput sgr0
-  ./restore-files
 }
 
 micro() {
@@ -99,10 +91,10 @@ until [ "$selection" = "0" ]; do
 tput setaf 3
   echo ""
   echo "    1  -  Update Mirrors & Arch Distro- Reboot OS. "
-  echo "    2  -  Install vim & bash files."
-  echo "    3  -  Install user programs. Edit pkgs before chossing install. "
-  echo "    4  -  Restore user files. * MOUNT DATA1 *"
-  echo "    5  -  Install micro editor."
+  echo "    2  -  Install vim & bash files. "
+  echo "    3  -  Restore xfce and configs. "
+  echo "    4  -  Restore plasma and configs. "
+  echo "    5  -  Install micro editor and folders."
   echo "    6  -  Install and setup bspwm. "
   echo "    7  -  Install and setup basic zsh."
   echo "    8  -  Remove packages. Edit pkg list before this."
@@ -115,8 +107,8 @@ tput sgr0
   case $selection in
     1 ) clear ; update-OS ; press_enter ;;
     2 ) clear ; phase1 ; press_enter ;;
-    3 ) clear ; phase2 ; press_enter ;;
-    4 ) clear ; restore-files ; press_enter ;;
+    3 ) clear ; xfce-phase ; press_enter ;;
+    4 ) clear ; kde-phase ; press_enter ;;
     5 ) clear ; micro ; press_enter ;;
     6 ) clear ; bspwm ; press_enter ;;
     7 ) clear ; zsh ; press_enter ;;

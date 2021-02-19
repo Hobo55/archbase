@@ -1,6 +1,6 @@
 #!/bin/bash
 #set -e
-############################################  ARCH BASE
+#            XFCE4  -------------------   ARCH BASE
 
 sudo pacman -Syy
 
@@ -31,10 +31,9 @@ func_category GPX
 list=(
 #evince     # doc viewer
 #gimp
-#gpick
-#inkscape   # gpx editor
-#nitrogen
-#nomacs     # image viewr/editor
+inkscape   # gpx editor
+nitrogen
+nomacs     # image viewr/editor
 #ristretto # image viewer
 )
 
@@ -51,7 +50,7 @@ func_category Programs
 
 list=(
 #albert             #like rofi
-#abiword            # doc editor
+abiword            # doc editor
 #arch-wiki-lite
 #arch-wiki-docs
 #bleachbit
@@ -59,17 +58,17 @@ list=(
 file-roller        #thunar-pluin
 geany
 geany-plugins
-#gpick
+gpick
 grsync
-#grub-customizer
+grub-customizer
 #gvim
 gufw               # firewall manager
 meld               # compare files
-#mousepad
+mousepad
 neovim
-#pcmanfm
-#picom
-#qbittorrent
+pcmanfm
+picom
+qbittorrent
 #ranger
 rofi
 thunar
@@ -93,6 +92,7 @@ func_category System cli
 list=(
 awk
 #bashtop                    # like htop
+bpytop                     # htop in python
 exa                        # ls official replacement
 expac                      # dbase extraction util
 feh                        # image viewer
@@ -102,7 +102,7 @@ gvfs                       # for file manager usb access
 hddtemp                    # hdrive temp info
 hwinfo                     #  list all hardware items
 imv                        # image viewer
-#lightdm-webkit2-greeter
+lightdm-webkit2-greeter
 mlocate                    # search tool
 most                       # pager
 ncdu                       # show file size
@@ -118,7 +118,7 @@ tree                       # show file tree
 unclutter                  # clear mouse in tile wm
 wget
 xdo                        # util to perform actions on windows in x
-#xfce4-clipman-plugin       # clipboard
+xfce4-clipman-plugin       # clipboard
 )
 
 count=0
@@ -133,7 +133,7 @@ done
 func_category Browsers
 
 list=(
-firefox
+#firefox
 )
 
 count=0
@@ -148,12 +148,12 @@ done
 func_category Terminal
 
 list=(
-#alacritty
+alacritty
 #cool-retro-term
-#sakura
-#termite
+sakura
+termite
 #terminator
-#xfce4-terminal
+xfce4-terminal
 )
 
 count=0
@@ -207,12 +207,13 @@ tput sgr0
 ./AUR/font-manager
 ./AUR/hardcode-fixer-git
 ./AUR/hw-probe-git         # hardware tool-shows website/stats
+./AUR/librewolf-bin        # firefox fork
 ./AUR/macho                # cli manpage searcher
 ./AUR/micro
 ./AUR/mintstick-git
 ./AUR/nerd-fonts-mononoki  # font
 ./AUR/otf-code-new-roman   # font
-#./AUR/pamac-aur-git
+./AUR/pamac-aur-git
 ./AUR/pkgcacheclean        # cache cleaner for pacman
 #./AUR/stacer               
 #./AUR/sublime-text-3
@@ -220,7 +221,7 @@ tput sgr0
 #./AUR/tdrop                # dropdown scratchpad
 ./AUR/timeshift
 ./AUR/xcwd-git             #tool to pwd of current focused window
-#./AUR/xfce4-panel-profiles  # needed ??
+./AUR/xfce4-panel-profiles  # needed ??
 
 #	always comes last (after fonts/icons)
 tput setaf 6
