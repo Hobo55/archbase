@@ -4,7 +4,7 @@
 ############################################################
 
 ## most pager, replaces the less pager
-sudo pacman -S --noconfirm --needed most
+sudo pacman -S most --noconfirm --needed
 
 ## folder in place ?
 [ -d $HOME"/.local/bin" ] || mkdir -p $HOME"/.local/bin"
