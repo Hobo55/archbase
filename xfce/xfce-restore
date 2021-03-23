@@ -29,22 +29,22 @@ rsync -av /run/media/whw/Data1/arcolinux/xfce/xfce4-keyboard-shortcuts.xml\
 ####  COPY ICONS AND THEMES FROM DATA1 W FILEMANGR  ####################
 
 ##  config folders
-rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/ $HOME/.config/
+#rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/ $HOME/.config/
 
 ###  just in case of snafu
-#rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/alacritty/ $HOME/.config/alacritty/
-#rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/bspwm/ $HOME/.config/bspwm/
-#rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/geany/ $HOME/.config/geany/
-#rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/gtk-3.0/bookmarks $HOME/.config/gtk-3.0/
-#rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/micro/ $HOME/.config/micro/
-#rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/polybar/ $HOME/.config/polybar/
-#rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/nvim/ $HOME/.config/nvim/
-#rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/rofi/ $HOME/.config/rofi/
-#rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/sakura/ $HOME/.config/sakura/
-#rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/starship.toml $HOME/.config/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/alacritty/ $HOME/.config/alacritty/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/bspwm/ $HOME/.config/bspwm/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/geany/ $HOME/.config/geany/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/gtk-3.0/bookmarks $HOME/.config/gtk-3.0/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/micro/ $HOME/.config/micro/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/polybar/ $HOME/.config/polybar/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/nvim/ $HOME/.config/nvim/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/rofi/ $HOME/.config/rofi/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/sakura/ $HOME/.config/sakura/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/starship.toml $HOME/.config/
 #rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/sublime-text-3/ $HOME/.config/sublime-text-3/
-#rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/termite/ $HOME/.config/termite/
-#rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/Thunar/ $HOME/.config/Thunar/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/termite/ $HOME/.config/termite/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/Thunar/ $HOME/.config/Thunar/
 ##rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/xfce4/ $HOME/.config/xfce4/
 
 tput setaf 3
