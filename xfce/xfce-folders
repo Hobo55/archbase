@@ -9,7 +9,7 @@ tput setaf 2
 echo "Creating personal folders. "
 tput sgr0
 
-[ -d $HOME"/backgrounds" ] || mkdir -p $HOME"/backgrounds"
+[ -d $HOME"/wallpaper" ] || mkdir -p $HOME"/wallpaper"
 [ -d $HOME"/bash" ] || mkdir -p $HOME"/bash"
 [ -d $HOME"/bin" ] || mkdir -p $HOME"/bin"
 [ -d $HOME"/Documents" ] || mkdir -p $HOME"/Documents"

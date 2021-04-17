@@ -12,7 +12,7 @@ tput sgr0
 
 rsync -av /run/media/whw/Data1/arcolinux/xfce/\
 .{bashrc,gitconfig,vimrc,gitconfig,} $HOME/
-rsync -av /run/media/whw/Data1/arcolinux/xfce/backgrounds/ $HOME/backgrounds/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/wallpaper/ $HOME/wallpaper/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/bash/ $HOME/bash/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/bin/ $HOME/bin/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/Documents/ $HOME/Documents/
