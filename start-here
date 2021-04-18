@@ -42,7 +42,7 @@ micro() {
   echo ""
   echo "  Installing micro and copy files to $HOME. "
   tput sgr0
-  ./su/micro-setup
+  ./setup/micro-setup
 }
 
 bspwm() {
@@ -50,7 +50,7 @@ bspwm() {
   echo ""
   echo "  Install and setup bspwm files to $HOME.  "
   tput sgr0
-  ./su/bspwm
+  ./setup/bspwm
 }
 
 zsh() {
@@ -58,7 +58,7 @@ zsh() {
   echo ""
   echo "  Setup basic zsh shell to $HOME.  "
   tput sgr0
-  ./su/zsh-setup
+  ./setup/zsh-setup
 }
 
 remove() {

@@ -32,7 +32,7 @@ echo "PATH=$HOME/bin:$PATH" >> $HOME/.bashrc
 	fi
 
 ## setup bash
-./su/bash-setup
+./setup/bash-setup
 
 # install & setup vim files
-./su/vim-setup
+./setup/vim-setup
