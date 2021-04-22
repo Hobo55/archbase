@@ -14,10 +14,11 @@ tput sgr0
 rsync -av /run/media/whw/Data1/arcolinux/plasma/\
 .{bashrc,conky,gitconfig,Xresources} $HOME/
 rsync -av /run/media/whw/Data1/arcolinux/plasma/bash/ $HOME/bash/
-rsync -av /run/media/whw/Data1/arcolinux/plasma/wallpaper/ $HOME/wallpaper/
 rsync -av /run/media/whw/Data1/arcolinux/plasma/bin/ $HOME/bin/
 rsync -av /run/media/whw/Data1/arcolinux/plasma/Documents/ $HOME/Documents/
 rsync -av /run/media/whw/Data1/arcolinux/plasma/helpers/ $HOME/helpers/
+rsync -av /run/media/whw/Data1/arcolinux/plasma/Python/ $HOME/Python/
+rsync -av /run/media/whw/Data1/arcolinux/plasma/wallpaper/ $HOME/wallpaper/
 
 ## local/share folders
 rsync -av /run/media/whw/Data1/arcolinux/plasma/.local/share/ $HOME/.local/share/

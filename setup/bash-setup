@@ -2,26 +2,22 @@
 
 ##  ~/.bashrc tweaks
 
-## Is curl installed ?
-	if pacman -Qi curl &> /dev/null; then
+## Is starship installed ?
+	if pacman -Qi starship &> /dev/null; then
 		tput setaf 2
-  		echo "   The package curl is already installed   "
+  		echo "   Starship is already installed   "
       	      	echo
 		tput sgr0
 	else
     	tput setaf 3
-    	echo "    Installing curl     "
+    	echo "    Installing starship     "
     	echo
     	tput sgr0
     	sudo pacman -S --noconfirm curl
    fi
 
-cd ~
-
-## install starship prompt from website
-curl -fsSL https://starship.rs/install.sh | bash
-
-cd archbase
+## install starship prompt
+#sudo pacman -S starship
 
 ## add lines to bashrc 
 cat conf/bash-add >> $HOME/.bashrc

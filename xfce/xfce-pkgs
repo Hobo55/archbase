@@ -112,6 +112,7 @@ reflector
 rsync
 shuffle                    # file manipulator for dmenu scripts
 #shellcheck                 # check bash scripts
+starship                   # starship prompt
 trash-cli                  # terminal trash can
 tree                       # show file tree
 #w3m                        # txt browser/pager

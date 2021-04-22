@@ -9,11 +9,12 @@ tput setaf 2
 echo "Creating personal folders. "
 tput sgr0
 
-[ -d $HOME"/wallpaper" ] || mkdir -p $HOME"/wallpaper"
 [ -d $HOME"/bash" ] || mkdir -p $HOME"/bash"
 [ -d $HOME"/bin" ] || mkdir -p $HOME"/bin"
 [ -d $HOME"/Documents" ] || mkdir -p $HOME"/Documents"
 [ -d $HOME"/helpers" ] || mkdir -p $HOME"/helpers"
+[ -d $HOME"/Python" ] || mkdir -p $HOME"/Python"
+[ -d $HOME"/wallpaper" ] || mkdir -p $HOME"/wallpaper"
 [ -d $HOME"/.config/BraveSoftware" ] || mkdir -p $HOME"/.config/BraveSoftware"
 [ -d $HOME"/.config/conky" ] || mkdir -p $HOME"/.config/conky"
 [ -d $HOME"/.config/geany/colorschemes" ] || mkdir -p $HOME"/.config/geany/colorschemes"
