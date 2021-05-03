@@ -11,8 +11,9 @@ echo "================================"
 tput sgr0
 
 rsync -av /run/media/whw/Data1/arcolinux/xfce/\
-.{bashrc,gitconfig,vimrc,gitconfig,} $HOME/
-rsync -av /run/media/whw/Data1/arcolinux/xfce/bash/ $HOME/bash/
+.{bashrc,bash_profile,gitconfig,vimrc,gitconfig,} $HOME/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.bash/ $HOME/.bash/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/Bash/ $HOME/Bash/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/bin/ $HOME/bin/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/Documents/ $HOME/Documents/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/helpers/ $HOME/helpers/
@@ -43,9 +44,9 @@ rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/nvim/ $HOME/.config/nvim/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/rofi/ $HOME/.config/rofi/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/sakura/ $HOME/.config/sakura/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/starship.toml $HOME/.config/
-#rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/sublime-text-3/ $HOME/.config/sublime-text-3/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/sublime-text-3/ $HOME/.config/sublime-text-3/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/termite/ $HOME/.config/termite/
-rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/Thunar/ $HOME/.config/Thunar/
+rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/Thunar/uca.xml $HOME/.config/Thunar/
 ##rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/xfce4/ $HOME/.config/xfce4/
 
 tput setaf 3
