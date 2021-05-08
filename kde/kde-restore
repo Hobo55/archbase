@@ -13,7 +13,8 @@ tput sgr0
 ## basic home folders
 rsync -av /run/media/whw/Data1/arcolinux/plasma/\
 .{bashrc,conky,gitconfig,Xresources} $HOME/
-rsync -av /run/media/whw/Data1/arcolinux/plasma/bash/ $HOME/bash/
+rsync -av /run/media/whw/Data1/arcolinux/plasma/.bash/ $HOME/.bash/
+rsync -av /run/media/whw/Data1/arcolinux/plasma/Bash/ $HOME/Bash/
 rsync -av /run/media/whw/Data1/arcolinux/plasma/bin/ $HOME/bin/
 rsync -av /run/media/whw/Data1/arcolinux/plasma/Documents/ $HOME/Documents/
 rsync -av /run/media/whw/Data1/arcolinux/plasma/helpers/ $HOME/helpers/
