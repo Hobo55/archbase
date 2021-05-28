@@ -42,7 +42,6 @@ rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/micro/ $HOME/.config/micro
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/polybar/ $HOME/.config/polybar/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/nvim/ $HOME/.config/nvim/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/rofi/ $HOME/.config/rofi/
-rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/sakura/ $HOME/.config/sakura/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/starship.toml $HOME/.config/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/sublime-text-3/ $HOME/.config/sublime-text-3/
 rsync -av /run/media/whw/Data1/arcolinux/xfce/.config/Thunar/uca.xml $HOME/.config/Thunar/
