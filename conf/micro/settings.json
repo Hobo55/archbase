@@ -1,6 +1,6 @@
 {
     "autoindent": false,
-    "colorscheme": "material-tc",
+    "colorscheme": "w-tc",
     "difgutter": true,
     "pluginchannels": [
         "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
