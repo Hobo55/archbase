@@ -211,7 +211,7 @@ tput sgr0
 #./AUR/pamac-aur-git
 ./AUR/pkgcacheclean        # cache cleaner for pacman
 #./AUR/stacer               
-#./AUR/sublime-text-3
+#./AUR/sublime-text
 ./AUR/surfn-icons-git      # icons
 ./AUR/timeshift
 ./AUR/xcwd-git             #tool to pwd of current focused window
